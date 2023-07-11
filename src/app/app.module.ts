@@ -12,6 +12,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
@@ -35,9 +36,14 @@ const appRoutes: Routes = [
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatIconModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [MatIconRegistry],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(public matIconRegistry: MatIconRegistry) {
+    matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
+  }
+}
