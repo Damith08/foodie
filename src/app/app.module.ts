@@ -14,13 +14,6 @@ import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 
-const appRoutes: Routes = [
-  { path: '', component: HomePageComponent },
-  { path: 'login', component: LoginPageComponent },
-  { path: 'signup', component: SignupPageComponent },
-  { path: 'menu', component: MenuPageComponent },
-];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,13 +30,12 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    RouterModule.forRoot(appRoutes),
   ],
   providers: [MatIconRegistry],
   bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(public matIconRegistry: MatIconRegistry) {
-    matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
+    matIconRegistry.registerFontClassAlias('font-awesome', 'fa');
   }
 }
