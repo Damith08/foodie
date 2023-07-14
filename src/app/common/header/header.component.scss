@@ -1,3 +1,10 @@
-// .background-color-header {
-//   background-color: black;
-// }
+.container {
+  justify-content: space-between;
+  padding-top: 14px;
+}
+.row {
+  flex-wrap: nowrap;
+}
+.d-flex {
+  justify-content: space-between;
+}
