@@ -1,139 +1,36 @@
-<!-- <div
-  class="fb-login-button"
-  data-width=""
-  data-size="large"
-  data-button-type="continue_with"
-  data-auto-logout-link="false"
-  data-use-continue-as="false"
-></div>
-
-<script>
-  var finished_rendering = function () {
-    console.log("finished rendering plugins");
-    var spinner = document.getElementById("spinner");
-    spinner.removeAttribute("style");
-    spinner.removeChild(spinner.childNodes[0]);
-  };
-  FB.Event.subscribe("xfbml.render", finished_rendering);
-</script>
-<div
-  id="spinner"
-  style="
-    background: #4267b2;
-    border-radius: 5px;
-    color: white;
-    height: 40px;
-    text-align: center;
-    width: 250px;
-  "
->
-  Loading
-  <div
-    class="fb-login-button"
-    data-max-rows="1"
-    data-size="large"
-    data-button-type="continue_with"
-    data-use-continue-as="true"
-  ></div>
-</div>
-
-<div
-  class="fb-login-button"
-  data-max-rows="1"
-  data-size="<medium, large>"
-  data-button-type="continue_with"
-  data-width="<100% or px>"
-  data-scope="<comma separated list of permissions, e.g. public_profile, email>"
-></div> -->
-<html>
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script src="https://apis.google.com/js/api:client.js"></script>
-    <script>
-      var googleUser = {};
-      var startApp = function () {
-        gapi.load("auth2", function () {
-          // Retrieve the singleton for the GoogleAuth library and set up the client.
-          auth2 = gapi.auth2.init({
-            client_id: "YOUR_CLIENT_ID.apps.googleusercontent.com",
-            cookiepolicy: "single_host_origin",
-            // Request scopes in addition to 'profile' and 'email'
-            //scope: 'additional_scope'
-          });
-          attachSignin(document.getElementById("customBtn"));
-        });
-      };
-
-      function attachSignin(element) {
-        console.log(element.id);
-        auth2.attachClickHandler(
-          element,
-          {},
-          function (googleUser) {
-            document.getElementById("name").innerText =
-              "Signed in: " + googleUser.getBasicProfile().getName();
-          },
-          function (error) {
-            alert(JSON.stringify(error, undefined, 2));
-          }
-        );
-      }
-    </script>
-    <style type="text/css">
-      #customBtn {
-        display: inline-block;
-        background: white;
-        color: #444;
-        width: 190px;
-        border-radius: 5px;
-        border: thin solid #888;
-        box-shadow: 1px 1px 1px grey;
-        white-space: nowrap;
-      }
-      #customBtn:hover {
-        cursor: pointer;
-      }
-      span.label {
-        font-family: serif;
-        font-weight: normal;
-      }
-      span.icon {
-        background: url("/identity/sign-in/g-normal.png") transparent 5px 50%
-          no-repeat;
-        display: inline-block;
-        vertical-align: middle;
-        width: 42px;
-        height: 42px;
-      }
-      span.buttonText {
-        display: inline-block;
-        vertical-align: middle;
-        padding-left: 42px;
-        padding-right: 42px;
-        font-size: 14px;
-        font-weight: bold;
-        /* Use the Roboto font that is loaded in the <head> */
-        font-family: "Roboto", sans-serif;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- In the callback, you would hide the gSignInWrapper element on a
-  successful sign in -->
-    <div id="gSignInWrapper">
-      <span class="label">Sign in with:</span>
-      <div id="customBtn" class="customGPlusSignIn">
-        <span class="icon"></span>
-        <span class="buttonText">Google</span>
-      </div>
+<div class="container p-5">
+  <div class="row d-flex justify-content-center">
+    <div
+      class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
+    >
+      <h2>Sign up or log in</h2>
+      <button mat-button class="dc__button--blue">
+        <img src="assets\svg\facebook-icon.svg" alt="Facebook" height="24px" />
+        Continue with Facebook
+      </button>
+      <button mat-button class="dc__button--white">
+        <img
+          src="assets\svg\google-color-icon.svg"
+          alt="Google"
+          height="19px"
+        />
+        Continue with Google
+      </button>
+      <button mat-button class="dc__button--black">
+        <img src="assets\svg\apple-icon.svg" alt="Apple" height="24px" />
+        Continue with Apple
+      </button>
+      <p class="dc__line">or</p>
+      <button mat-button class="dc__button--green">
+        <img src="assets\svg\email-icon.svg" alt="Email" height="24px" />
+        Continue with email
+      </button>
+      <p class="dc__text">
+        By continuing you agree to our <a href="">T&Cs</a>. Please also check
+        out our <a href="">Privacy Policy</a>. We use your data to offer you a
+        personalised experience and to better understand and improve our
+        services. <a href="">For more information see here</a>.
+      </p>
     </div>
-    <div id="name"></div>
-    <script>
-      startApp();
-    </script>
-  </body>
-</html>
+  </div>
+</div>
