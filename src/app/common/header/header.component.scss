@@ -1,10 +1,16 @@
-.container {
-  justify-content: space-between;
-  padding-top: 14px;
-}
-.row {
-  flex-wrap: nowrap;
-}
-.d-flex {
-  justify-content: space-between;
+.dc {
+
+  &__header {
+    justify-content: space-between;
+    padding-top: 14px;
+  }
+
+  &__row {
+    flex-wrap: nowrap;
+  }
+
+  &__flex {
+    justify-content: space-between;
+  }
+
 }
