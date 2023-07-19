@@ -3,7 +3,7 @@
     <div
       class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
     >
-      <h2>Sign up or log in</h2>
+      <h1 class="dc__h1">Sign up or log in</h1>
       <button mat-button class="dc__button--blue">
         <img src="assets\svg\facebook-icon.svg" alt="Facebook" height="24px" />
         Continue with Facebook
@@ -22,7 +22,10 @@
       </button>
       <p class="dc__line">or</p>
       <button mat-button class="dc__button--green">
-        <img src="assets\svg\email-icon.svg" alt="Email" height="24px" />
+        <img src="assets\svg\email-icon.svg" alt="Email" height="24px" /><a
+          (click)="isLogin()"
+          href=""
+        ></a>
         Continue with email
       </button>
       <p class="dc__text">
