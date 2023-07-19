@@ -7,7 +7,11 @@ import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'login', component: LoginPageComponent },
+  {
+    path: 'login',
+    component: LoginPageComponent,
+    children: [{ path: '', component: SignupPageComponent }],
+  },
   { path: 'signup', component: SignupPageComponent },
   { path: 'menu', component: MenuPageComponent },
 ];

@@ -1,4 +1,13 @@
 .dc {
+
+  &__h1 {
+    color: #2e3333;
+    font-family: plex-sans,sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+
   &__line {
     text-align: center;
   }
