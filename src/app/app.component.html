@@ -1,8 +1,24 @@
 <mat-drawer-container class="example-container" autosize>
-  <app-header></app-header>
-  <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+  <app-header (sidenav)="sidenav.toggle()"></app-header>
+  <mat-drawer #drawer class="sidenav" mode="over" position="end">
+    <div class="dc dc__sidenav">
+      <div class="row">
+        <img
+          src="assets\svg\deliveroo-logo.svg"
+          alt="deliveroo-logo"
+          height="32px"
+        />
+        <button></button>
+      </div>
+      <div class="dc__sidnavbtn" style="display: grid">
+        <button mat-button class="dc__signup">
+          <a class="dc__navtext" href="">Sign up or log in</a>
+        </button>
+        <button mat-button>
+          <a class="dc__faqtext" href="">FAQs</a>
+        </button>
+      </div>
+    </div>
   </mat-drawer>
 
   <div class="example-sidenav-content">

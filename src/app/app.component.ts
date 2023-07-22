@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   title = 'deliveroo-clone';
   showFiller = false;
+  sidenav: any;
 
   openSideBar(sidebarOpen: boolean) {}
 }
