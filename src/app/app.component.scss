@@ -3,13 +3,27 @@
   flex-direction: column;
 }
 
-// .example-sidenav-content {
-//   display: flex;
-//   height: 100%;
-//   align-items: center;
+.dc {
 
-// }
+  &__signup {
+    margin-top: 10px;
+    background-color: #00ccbc;
+    min-height: 48px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 16px
+  }
 
-// .example-sidenav {
-//   padding: 20px;
-// }
+  &__navtext {
+    color: #fff !important;
+    text-decoration: none;
+  }
+
+  &__faqtext {
+    color: #2e3333;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}

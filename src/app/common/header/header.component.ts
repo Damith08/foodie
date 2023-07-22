@@ -6,10 +6,10 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  @Output() sidebar = new EventEmitter<boolean>();
+  @Output() sidenav: EventEmitter<any> = new EventEmitter();
   showFiller = false;
 
-  sideBarOpen(value: boolean) {
-    this.sidebar.emit(value);
+  toggle() {
+    this.sidenav.emit();
   }
 }
