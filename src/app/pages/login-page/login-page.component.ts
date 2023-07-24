@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { SignupPageComponent } from '../signup-page/signup-page.component';
 
 @Component({
   selector: 'app-login-page',
@@ -10,7 +9,7 @@ import { SignupPageComponent } from '../signup-page/signup-page.component';
 export class LoginPageComponent {
   constructor(private router: Router) {}
 
-  isLogin() {
-    this.router.navigate([SignupPageComponent]);
+  onLoadSignin() {
+    this.router.navigate(['/signup']);
   }
 }

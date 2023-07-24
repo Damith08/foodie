@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,19 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  constructor(private router: Router) {}
   @Output() sidenav: EventEmitter<any> = new EventEmitter();
   showFiller = false;
 
   toggle() {
     this.sidenav.emit();
+  }
+
+  onLoadLogin() {
+    this.router.navigate(['/login']);
+  }
+
+  onLoadMenu() {
+    this.router.navigate(['/menu']);
   }
 }
