@@ -1,3 +1,61 @@
-.homepage {
-  background-color: black;
+.dc {
+  padding: 64px 16px 104px;
+
+
+  &__background-color {
+    background-color: rgb(0, 0, 0);
+  }
+
+  &__landingh1 {
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 900;
+    padding-bottom: 32px;
+  }
+
+  &__searchbar-text{
+    padding-bottom: 16px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  // &__button-container {
+  //   flex-direction: row ;
+  // }
+
+  &__searchbar {
+    display: flex;
+    border-radius: 100px;
+  }
+
+  &__nav-svg-btn {
+    border: none;
+  }
+
+  &__searchbtn {
+    background-color: #00ccbc;
+    color: #fff;
+    border-radius: 100px;
+  }
+
+  &__lpgrow {
+    text-align: center;
+  }
+
+  &__login-white-text {
+    color: #fff;
+  }
+
+  &__logintext {
+    color: #00ccbc;
+    text-decoration: none;
+  }
+
+  &__location-search {
+    border-radius: 100px;
+  }
 }
+

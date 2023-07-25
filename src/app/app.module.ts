@@ -14,6 +14,8 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [MatIconRegistry],
   bootstrap: [AppComponent],
