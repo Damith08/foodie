@@ -1,5 +1,5 @@
 <mat-drawer-container class="example-container" autosize>
-  <app-header (sidenav)="sidenav.toggle()"></app-header>
+  <app-header (sidenav)="drawer.toggle()"></app-header>
   <mat-drawer #drawer class="sidenav" mode="over" position="end">
     <div class="dc dc__sidenav">
       <div class="row">
@@ -21,9 +21,7 @@
   </mat-drawer>
 
   <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
-    </button>
+    <button type="button" mat-button (click)="drawer.toggle()"></button>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
   </div>

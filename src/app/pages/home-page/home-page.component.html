@@ -1,3 +1,40 @@
-<div class="homepage">
-  <p>home-page works!</p>
+<div class="container dc dc__background-color">
+  <div class="d-flex justify-content-center">
+    <div class="col-12 col-md-5 flex-column align-item-center">
+      <div class="row dc__lpgrow">
+        <h1 class="dc__landingh1">
+          Restaurant food, takeaway and groceries.
+          <span style="color: #00ccbc">Delivered.</span>
+        </h1>
+        <div class="dc__searchbar">
+          <div class="row">
+            <label class="dc__searchbar-text">
+              <p>Enter a postcode to see what we deliver</p></label
+            >
+            <div class="dc__button-container">
+              <p>
+                <mat-form-field appearance="fill" class="dc__searchbar">
+                  <button class="dc__nav-svg-btn">
+                    <img
+                      src="assets\svg\navigation.svg"
+                      alt="nav-icon"
+                      height="15px"
+                    />
+                  </button>
+                  <input matInput placeholder="e.g. EC4R 3TE" />
+                  <button mat-button class="dc__searchbtn">Search</button>
+                </mat-form-field>
+              </p>
+            </div>
+            <span class="dc__login-white-text"
+              ><p>
+                <a class="dc__logintext" routerLink="login">Log in</a>
+                for your recent addresses.
+              </p></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

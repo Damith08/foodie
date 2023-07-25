@@ -18,8 +18,4 @@ export class HeaderComponent {
   onLoadLogin() {
     this.router.navigate(['/login']);
   }
-
-  onLoadMenu() {
-    this.router.navigate(['/menu']);
-  }
 }
