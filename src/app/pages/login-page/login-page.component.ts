@@ -10,6 +10,6 @@ export class LoginPageComponent {
   constructor(private router: Router) {}
 
   onLoadSignin() {
-    this.router.navigate(['/signup']);
+    this.router.navigate(['/signup'], { skipLocationChange: true });
   }
 }
