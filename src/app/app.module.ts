@@ -14,8 +14,9 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatIconModule,
     MatSidenavModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
   ],
   providers: [MatIconRegistry],
   bootstrap: [AppComponent],

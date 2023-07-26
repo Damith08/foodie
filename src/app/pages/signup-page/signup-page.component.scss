@@ -1,12 +1,14 @@
 .dc {
 
-  &__input {
+  &__input{
     border: 1px solid #e8ebeb;
-    padding-left: 164px;
+    width: 420px;
+    padding: 12px 16px;
     padding-bottom: 16px;
     margin-bottom: 14px;
     height: 46;
     width: 346;
+    border-radius: 4px;
   }
   &__continue {
     font-weight: 600;
