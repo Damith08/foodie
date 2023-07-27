@@ -16,7 +16,9 @@ import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { NgFor } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
+    MatSelectModule,
+    NgFor,
   ],
   providers: [MatIconRegistry],
   bootstrap: [AppComponent],

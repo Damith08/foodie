@@ -4,25 +4,88 @@
     <div class="container dc dc__sidenav">
       <div class="row">
         <div class="col dc__nav-icons">
-          <img
-            src="assets\svg\deliveroo-logo.svg"
-            alt="deliveroo-logo"
-            height="32px"
-          />
-          <button mat-button class="dc__x-icon">
+          <a href="">
+            <img
+              src="assets\svg\deliveroo-logo.svg"
+              alt="deliveroo-logo"
+              height="32px"
+            />
+          </a>
+          <button mat-button class="dc__x-icon" (click)="sidenav.close()">
             <a href="">
               <img src="assets\svg\x-icon.svg" alt="X" height="24" width="24" />
             </a>
           </button>
         </div>
       </div>
+      <hr />
       <div class="container dc__sidnavbtn" style="display: grid">
         <button mat-button class="dc__signup">
-          <a class="dc__navtext" href="">Sign up or log in</a>
+          <a class="dc__navtext" routerLink="login">Sign up or log in</a>
         </button>
-        <button mat-button>
-          <a class="dc__faqtext" href="">FAQs</a>
-        </button>
+      </div>
+      <div class="container" style="padding-bottom: 186px">
+        <a class="d-md-none dc__faqs" href=""
+          ><img
+            src="assets\svg\nav-svgs\bicycle.svg"
+            alt="question-mark-icon"
+            height="24"
+            width="24"
+          />
+          <span class="dc__faqs-text"><p>Become a Rider</p></span></a
+        >
+        <a class="d-md-none dc__faqs" href=""
+          ><img src="assets\svg\nav-svgs\eat.svg" height="24" width="24" />
+          <span class="dc__faqs-text"><p>Add your restaurant</p></span></a
+        >
+        <a class="d-md-none dc__faqs" href=""
+          ><img
+            src="assets\svg\nav-svgs\office-building.svg"
+            alt="question-mark-icon"
+            height="24"
+            width="24"
+          />
+          <span class="d-md-none dc__faqs-text"
+            ><p>Sign up your office</p></span
+          ></a
+        >
+        <a class="dc__faqs" href=""
+          ><img
+            src="assets\svg\nav-svgs\question-mark-icon.svg"
+            alt="question-mark-icon"
+            height="24"
+            width="24"
+          />
+          <span class="dc__faqs-text"><p>FAQs</p></span></a
+        >
+      </div>
+      <div class="container dc__lables">
+        <div class="row">
+          <mat-form-field>
+            <select matNativeControl required class="dc__language">
+              <option value="english">English</option>
+            </select>
+          </mat-form-field>
+        </div>
+        <div class="row dc__countries">
+          <mat-form-field>
+            <select matNativeControl required>
+              <option value="australia">Australia</option>
+              <option value="belgium">Belgium</option>
+              <option value="france">France</option>
+              <option value="germany">Germany</option>
+              <option value="ireland">Ireland</option>
+              <option value="italy">Italy</option>
+              <option value="kuwait">Kuwait</option>
+              <option value="nether lands">Nether lands</option>
+              <option value="qatar">Qatar</option>
+              <option value="singapore">Singapore</option>
+              <option value="taiwan">Taiwan</option>
+              <option value="united arab amirates">United Arab Emirates</option>
+              <option value="united kingdom">United Kingdom</option>
+            </select>
+          </mat-form-field>
+        </div>
       </div>
     </div>
   </mat-drawer>
