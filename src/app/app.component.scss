@@ -26,4 +26,23 @@
     line-height: 22px;
     font-weight: 400;
   }
+
+  &__sidebar {
+    width: 375px;
+  }
+
+  &__nav-icons {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+  }
+
+  // &__x-icon {
+  //   pointer-events: none;
+  // }
+
+  &__sidenav {
+    padding: 8px 0 8px 24px;
+  }
 }
+

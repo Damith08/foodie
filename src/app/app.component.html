@@ -1,15 +1,22 @@
 <mat-drawer-container class="example-container" autosize>
   <app-header (sidenav)="drawer.toggle()"></app-header>
-  <mat-drawer #drawer class="sidenav" mode="over" position="end">
-    <div class="dc dc__sidenav">
+  <mat-drawer #drawer class="sidenav dc__sidebar" mode="over" position="end">
+    <div class="container dc dc__sidenav">
       <div class="row">
-        <img
-          src="assets\svg\deliveroo-logo.svg"
-          alt="deliveroo-logo"
-          height="32px"
-        />
+        <div class="col dc__nav-icons">
+          <img
+            src="assets\svg\deliveroo-logo.svg"
+            alt="deliveroo-logo"
+            height="32px"
+          />
+          <button mat-button class="dc__x-icon">
+            <a href="">
+              <img src="assets\svg\x-icon.svg" alt="X" height="24" width="24" />
+            </a>
+          </button>
+        </div>
       </div>
-      <div class="dc__sidnavbtn" style="display: grid">
+      <div class="container dc__sidnavbtn" style="display: grid">
         <button mat-button class="dc__signup">
           <a class="dc__navtext" href="">Sign up or log in</a>
         </button>
