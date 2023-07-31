@@ -6,6 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  userLogin() {
+    throw new Error('Method not implemented.');
+  }
   title = 'deliveroo-clone';
   showFiller = false;
   sidenav: any;

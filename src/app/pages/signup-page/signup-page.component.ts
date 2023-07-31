@@ -7,8 +7,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./signup-page.component.scss'],
 })
 export class SignupPageComponent {
-  // public user = { email: '' };
-  // email: any;
+  public user = { email: '' };
+  email: any;
 
   onSubmit(form: NgForm) {
     console.log('form');
