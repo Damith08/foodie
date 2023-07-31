@@ -1,4 +1,4 @@
-<div class="container p-5">
+<div class="container p-5" *ngIf="showLogin">
   <div class="row d-flex justify-content-center">
     <div
       class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
@@ -33,6 +33,44 @@
         personalised experience and to better understand and improve our
         services. <a href="">For more information see here</a>.
       </p>
+    </div>
+  </div>
+</div>
+<div class="container p-5" *ngIf="showSignup">
+  <div class="row d-flex justify-content-center">
+    <div
+      class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
+    >
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <h1 class="dc__h1">Sign up or log in</h1>
+        <div class="dc__inputfield">
+          <p>Email address</p>
+          <div class="row">
+            <input
+              class="form-control dc__input"
+              type="email"
+              placeholder="e.g.name@example.com"
+              ngModel
+              name="email"
+              required
+              email
+            />
+          </div>
+          <div class="row">
+            <button
+              mat-button
+              type="submit"
+              class="dc__continue"
+              [disabled]="!f.valid"
+            >
+              Continue
+            </button>
+          </div>
+          <div class="row">
+            <button mat-button class="dc dc__forgot">Forgot password</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>
