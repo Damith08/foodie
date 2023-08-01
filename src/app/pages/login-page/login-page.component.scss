@@ -81,6 +81,10 @@
     height: 48px;
     margin-top: 14px;
     margin-bottom: 14px;
+
+    &:disabled {
+
+    }
   }
 
   &__forgot {
