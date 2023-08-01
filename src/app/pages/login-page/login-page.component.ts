@@ -11,13 +11,11 @@ import { Router } from '@angular/router';
 // showSignup: false;
 export class LoginPageComponent {
   showLogin = true;
-  showSignup = false;
 
   constructor(private router: Router) {}
 
   onLoadSignin() {
     this.showLogin = false;
-    this.showSignup = true;
     // this.router.navigate(['/signup'], { skipLocationChange: true });
     // if(!this.showLogin) {
     //   return this.showSignup
