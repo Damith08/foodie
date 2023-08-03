@@ -46,8 +46,7 @@
         <div class="dc__inputfield">
           <p>Email address</p>
           <div class="row">
-
-            <input
+            <!-- <input
               class="form-control dc__input"
               type="email"
               placeholder="e.g.name@example.com"
@@ -55,7 +54,18 @@
               name="email"
               required
               email
-            />
+            /> -->
+            <mat-form-field appearance="outline" class="dc__input-field">
+              <input
+                matInput
+                placeholder="e.g.name@example.com"
+                type="email"
+                ngModel
+                name="email"
+                required
+                email
+              />
+            </mat-form-field>
           </div>
           <div class="row">
             <button

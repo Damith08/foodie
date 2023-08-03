@@ -7,8 +7,6 @@ import { Router } from '@angular/router';
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss'],
 })
-
-// showSignup: false;
 export class LoginPageComponent {
   showLogin = true;
 
