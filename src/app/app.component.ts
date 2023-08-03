@@ -6,6 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  defaultCountry = 'united kingdom';
+
   userLogin() {
     throw new Error('Method not implemented.');
   }

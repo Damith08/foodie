@@ -69,7 +69,7 @@
         </div>
         <div class="row dc__countries">
           <mat-form-field>
-            <select matNativeControl required>
+            <select matNativeControl required [ngModel]="defaultCountry">
               <option value="australia">Australia</option>
               <option value="belgium">Belgium</option>
               <option value="france">France</option>

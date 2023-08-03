@@ -13,8 +13,8 @@
             >
             <div class="dc__button-container">
               <div class="row d-flex">
-                <p>
-                  <mat-form-field appearance="fill" class="dc__searchbar">
+                <div class="container">
+                  <p>
                     <button class="dc__nav-svg-btn">
                       <img
                         src="assets\svg\navigation.svg"
@@ -28,8 +28,20 @@
                       placeholder="e.g. EC4R 3TE"
                     />
                     <button mat-button class="dc__searchbtn">Search</button>
-                  </mat-form-field>
-                </p>
+                  </p>
+                  <div class="input-group">
+                    <button class="btn btn-outline-secondary" type="button"  aria-expanded="false"><img
+                      src="assets\svg\navigation.svg"
+                      alt="nav-icon"
+                      height="15px"
+                    /></button>
+                    <input type="text"
+                    class="form-control"
+                    aria-label="Text input with 2 dropdown buttons"
+                    placeholder="e.g. EC4R 3TE">
+                    <button mat-button class="dc__searchbtn">Search</button>
+                  </div>
+                </div>
               </div>
             </div>
             <span class="dc__login-white-text"
