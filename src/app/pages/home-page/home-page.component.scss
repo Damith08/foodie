@@ -1,7 +1,6 @@
 .dc {
   padding: 64px 16px 104px;
 
-
   &__background-color {
     background-color: rgb(0, 0, 0);
   }
@@ -56,5 +55,25 @@
   &__input {
     width: fit-content;
     padding-right: 83px;
+  }
+
+  &__home-card {
+    display: table;
+  }
+
+  &__track-order {
+    justify-content: space-between;
+  }
+
+  &__tocheading {
+    font-family: tratos, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #2e3333;
+  }
+
+  &__tocpara {
+    font-size: 20px;
+    margin-top: 16px;
   }
 }
