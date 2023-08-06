@@ -76,4 +76,83 @@
     font-size: 20px;
     margin-top: 16px;
   }
+
+  &__discount-area {
+    padding: 90px;
+    flex-direction: column;
+    text-align: center;
+    background-color: #00ccbc;
+    color: #fff;
+  }
+
+  &__discount-heading {
+    font-family: stratos !important;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: bold;
+  }
+
+  &__discount-para1 {
+    font-size: 18px;
+  }
+
+  &__discount-para2 {
+    font-size: 14px;
+  }
+
+  &__card-row1 {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+  }
+
+  &__card-partner {
+    background-image: url("https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80");
+    background-size: cover;
+    height: 480px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__card-rider {
+    background-image: url("https://images.unsplash.com/photo-1567961258941-911aa712744f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80");
+    background-size: cover;
+    height: 480px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__card-food {
+    background-image: url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80");
+    background-size: cover;
+    height: 480px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__card-voucher {
+    background-image: url("https://images.unsplash.com/photo-1526614180703-827d23e7c8f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80");
+    background-size: cover;
+    height: 480px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__card-heading {
+    font-family: stratos, sans-serif !important;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  &__card-paragraph {
+    font-size: 18px;
+    color: #fff;
+  }
+
+  &__card-button {
+    background-color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+  }
 }
