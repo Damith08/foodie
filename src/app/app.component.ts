@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   defaultCountry = 'united kingdom';
+  @Output() close = new EventEmitter<void>();
 
   userLogin() {
     throw new Error('Method not implemented.');
@@ -16,4 +17,8 @@ export class AppComponent {
   sidenav: any;
 
   openSideBar(sidebarOpen: boolean) {}
+
+  onClose() {
+    this.close.emit();
+  }
 }
