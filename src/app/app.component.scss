@@ -4,7 +4,6 @@
 }
 
 .dc {
-
   &__signup {
     margin-top: 10px;
     background-color: #00ccbc;
@@ -48,16 +47,11 @@
     color: #00ccbc;
   }
 
-  &__lables{
+  &__lables {
     align-items: end;
   }
 
   &__sidenav {
     padding-top: 16px;
   }
-
-  // &__language {
-  //   background-color: transparent !important;
-  // }
 }
-
