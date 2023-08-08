@@ -1,4 +1,4 @@
-.dc {
+.dc-home {
   padding: 64px 16px 104px;
 
   &__background-color {
@@ -48,28 +48,6 @@
     text-decoration: none;
   }
 
-  &__location-search {
-    border-radius: 100px;
-  }
-
-  &__input {
-    width: fit-content;
-    padding-right: 83px;
-  }
-
-  &__home-card {
-    display: table;
-  }
-
-  &__track-order {
-    justify-content: space-between;
-  }
-
-  &d__toc {
-    padding-top: 24px;
-    margin: 8px 32px;
-  }
-
   &__tocheading {
     font-family: tratos, sans-serif;
     font-size: 40px;
@@ -81,7 +59,7 @@
     font-size: 20px;
     margin-top: 16px;
   }
-
+  // discount section
   &__discount-area {
     padding: 90px;
     flex-direction: column;
@@ -91,7 +69,6 @@
   }
 
   &__discount-heading {
-    font-family: stratos !important;
     font-size: 40px;
     line-height: 48px;
     font-weight: bold;
@@ -103,44 +80,6 @@
 
   &__discount-para2 {
     font-size: 14px;
-  }
-
-  &__card-row1 {
-    float: left;
-    width: 50%;
-    padding: 0 10px;
-  }
-
-  &__card-partner {
-    background-image: url("https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80");
-    background-size: cover;
-    height: 480px;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  &__card-rider {
-    background-image: url("https://images.unsplash.com/photo-1567961258941-911aa712744f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80");
-    background-size: cover;
-    height: 480px;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  &__card-food {
-    background-image: url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80");
-    background-size: cover;
-    height: 480px;
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  &__card-voucher {
-    background-image: url("https://images.unsplash.com/photo-1526614180703-827d23e7c8f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80");
-    background-size: cover;
-    height: 480px;
-    width: 100%;
-    margin-top: 20px;
   }
 
   &__card-heading {
@@ -159,5 +98,98 @@
     background-color: #fff;
     font-size: 16px;
     text-decoration: none;
+  }
+  //..search bar
+  &__search-bar {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__searchbar-bg {
+    background-color: white;
+    border-radius: 58px;
+    width: 88%;
+    height: 67px;
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__searchbar-svg {
+    margin-top: 9px;
+    margin-left: 20px;
+    height: 20px;
+    width: 20px;
+    margin-top: 23px;
+  }
+
+  &__search-input {
+    margin-left: 10px;
+    height: 100%;
+    width: 79%;
+    border: none;
+    margin-right: 10px;
+  }
+
+  &__search-btn {
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+
+  &__search-btn {
+    background-color: #00ccbc;
+    font-weight: 900;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 16px 40px;
+    min-height: 56px;
+  }
+  //..cards
+
+  &__card-row {
+    margin-bottom: 36px;
+  }
+
+  &__mat-card01 {
+    background-image: url("https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80");
+    background-size: cover;
+    border-radius: 10px;
+    height: 480px;
+  }
+
+  &__mat-card02 {
+    background-image: url("https://images.unsplash.com/photo-1567961258941-911aa712744f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80");
+    background-size: cover;
+    border-radius: 10px;
+    height: 480px;
+  }
+
+  &__mat-card03 {
+    background-image: url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80");
+    background-size: cover;
+    border-radius: 10px;
+    height: 480px;
+  }
+
+  &__mat-card04 {
+    background-image: url("https://images.unsplash.com/photo-1526614180703-827d23e7c8f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80");
+    background-size: cover;
+    border-radius: 10px;
+    height: 480px;
+  }
+
+  &__matcard-body {
+    margin: 0 148px 24px 24px;
+  }
+
+  &__matcard-heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  &__matcard-paragraph {
+    font-size: 18px;
+    color: #fff;
   }
 }

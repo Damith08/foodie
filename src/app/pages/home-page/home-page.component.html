@@ -1,66 +1,42 @@
-<div class="dc dc__background-color">
+<div class="dc-home dc-home__background-color">
   <div class="d-flex justify-content-center">
     <div class="col-12 col-md-5 flex-column align-item-center">
-      <div class="row dc__lpgrow">
-        <h1 class="dc__landingh1">
+      <div class="row dc-home__lpgrow">
+        <h1 class="dc-home__landingh1">
           Restaurant food, takeaway and groceries.
           <span style="color: #00ccbc">Delivered.</span>
         </h1>
-        <div class="dc__searchbar">
+        <div class="dc-home__searchbar">
           <div class="row">
-            <label class="dc__searchbar-text">
+            <label class="dc-home__searchbar-text">
               <p>Enter a postcode to see what we deliver</p></label
             >
-            <div class="dc__button-container">
-              <div class="row d-flex">
-                <div class="container">
-                  <!-- <p>
-                    <button class="dc__nav-svg-btn">
-                      <img
-                        src="assets\svg\navigation.svg"
-                        alt="nav-icon"
-                        height="15px"
-                      />
-                    </button>
-                    <input
-                      class="dc__input"
-                      matInput
-                      placeholder="e.g. EC4R 3TE"
+            <div class="container">
+              <div class="row">
+                <div class="dc-home__search-bar">
+                  <div class="dc-home__searchbar-bg">
+                    <img
+                      src="assets\svg\home\navigation.svg"
+                      alt="navigation-button"
+                      class="dc-home__searchbar-svg"
                     />
-                    <button mat-button class="dc__searchbtn">Search</button>
-                  </p> -->
-                  <form action="">
-                    <button>search</button>
-                    <input type="text" placeholder="e.g. EC4R 3TE" />
-                    <button mat-button class="dc__searchbtn">Search</button>
-                  </form>
-
-                  <div class="input-group">
-                    <button
-                      class="btn btn-outline-secondary"
-                      type="button"
-                      aria-expanded="false"
-                    >
-                      <img
-                        src="assets\svg\navigation.svg"
-                        alt="nav-icon"
-                        height="15px"
-                      />
-                    </button>
                     <input
                       type="text"
-                      class="form-control"
-                      aria-label="Text input with 2 dropdown buttons"
+                      class="dc-home__search-input"
                       placeholder="e.g. EC4R 3TE"
                     />
-                    <button mat-button class="dc__searchbtn">Search</button>
+                    <div class="dc-home__btn">
+                      <button mat-stroked-button class="dc-home__search-btn">
+                        Search
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <span class="dc__login-white-text"
+            <span class="dc-home__login-white-text"
               ><p>
-                <a class="dc__logintext" routerLink="login">Log in</a>
+                <a class="dc-home__logintext" routerLink="login">Log in</a>
                 for your recent addresses.
               </p></span
             >
@@ -70,18 +46,19 @@
     </div>
   </div>
 </div>
-
+<br />
+<br />
 <div class="container">
-  <div class="row">
-    <div class="col-12">
-      <div class="card">
-        <div class="d-flex dc__track-order">
-          <div class="dc__toc">
+  <div class="row dc-home__card-row">
+    <mat-card>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-4">
             <span>
-              <h2 class="dc__tocheading">Track orders to your door</h2>
+              <h2 class="dc-home__tocheading">Track orders to your door</h2>
             </span>
             <div>
-              <p class="dc__tocpara">
+              <p class="dc-home__tocpara">
                 Get your favourite food delivered in a flash. You’ll see when
                 your rider’s picked up your order, and be able to follow them
                 along the way. You’ll get a notification when they’re nearby,
@@ -102,28 +79,30 @@
                 height="40px"
               />
             </div>
-            <div></div>
           </div>
-          <img src="assets\svg\home\map.avif" alt="map" />
+          <div class="col-8">
+            <img src="assets\svg\home\map.avif" alt="map" />
+          </div>
         </div>
-      </div>
-    </div>
+      </mat-card-content>
+    </mat-card>
   </div>
 </div>
+
 <br />
 <div>
-  <div class="d-flex dc__discount-area">
+  <div class="d-flex dc-home__discount-area">
     <div>
-      <h2 class="dc__discount-heading">Up to 25% off - Meal Deals</h2>
+      <h2 class="dc-home__discount-heading">Up to 25% off - Meal Deals</h2>
     </div>
     <div>
-      <p class="dc__discount-para1">
+      <p class="dc-home__discount-para1">
         Need a midweek pick-me-up, a break from cooking for the family or just
         fancy your favourite restaurant?
       </p>
     </div>
     <div>
-      <p class="dc__discount-para2">
+      <p class="dc-home__discount-para2">
         Service and delivery fees, subject to availability. Participating
         restaurants only. T&Cs apply. <a href="" style="color: #fff">Terms</a>
       </p>
@@ -131,59 +110,81 @@
   </div>
 </div>
 <br />
+
 <div class="container">
-  <div class="row">
-    <div class="col-6 dc__card-row1">
-      <div class="card dc__card-partner">
-        <div class="card-body">
-          <h2 class="card-title dc__card-heading">Partner with us</h2>
-          <p class="card-text dc__card-paragraph">
-            Join Deliveroo and reach more customers than ever. We handle
-            delivery, so you can focus on the food.
-          </p>
-          <a href="#" mat-stroked-button class="dc__card-button">Get Start</a>
-        </div>
-      </div>
+  <div class="row dc-home__card-row align-items-end">
+    <div class="col">
+      <mat-card class="dc-home__mat-card01">
+        <mat-card-content></mat-card-content>
+        <mat-card-footer>
+          <div class="dc-home__matcard-body">
+            <h2 class="dc-home__matcard-heading">Partner with us</h2>
+            <p class="dc-home__matcard-paragraph">
+              Join Deliveroo and reach more customers than ever. We handle
+              delivery, so you can focus on the food.
+            </p>
+            <a href="#" mat-stroked-button class="dc-home__card-button"
+              >Get Start</a
+            >
+          </div>
+        </mat-card-footer>
+      </mat-card>
     </div>
-    <div class="col-6 dc__card-row1">
-      <div class="card dc__card-rider">
-        <div class="card-body">
-          <h2 class="card-title dc__card-heading">Ride with us</h2>
-          <p class="card-text dc__card-paragraph">
-            The freedom to fit work around your life. Plus great fees, perks and
-            discounts.
-          </p>
-          <a href="#" mat-stroked-button class="dc__card-button">Get Start</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <br />
-  <div class="row">
-    <div class="col-6 dc__card-row1">
-      <div class="card dc__card-food">
-        <div class="card-body">
-          <h2 class="card-title dc__card-heading">Deliveroo For Work</h2>
-          <p class="card-text dc__card-paragraph">
-            Looking for a workplace food solution to reward your team, boost
-            morale or treat your clients? Our corporate team can help.
-          </p>
-          <a href="#" mat-stroked-button class="dc__card-button">Get Start</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 dc__card-row1">
-      <div class="card dc__card-voucher">
-        <div class="card-body">
-          <h2 class="card-title dc__card-heading">Gift Cards</h2>
-          <p class="card-text dc__card-paragraph">
-            Looking for an easy way to treat your friends and family? Give the
-            gift of great food with a Deliveroo gift card.
-          </p>
-          <a href="#" mat-stroked-button class="dc__card-button">Get Start</a>
-        </div>
-      </div>
+    <div class="col">
+      <mat-card class="dc-home__mat-card02">
+        <mat-card-content></mat-card-content>
+        <mat-card-footer>
+          <div class="dc-home__matcard-body">
+            <h2 class="dc-home__matcard-heading">Ride with us</h2>
+            <p class="dc-home__matcard-paragraph">
+              The freedom to fit work around your life. Plus great fees, perks
+              and discounts.
+            </p>
+            <a href="#" mat-stroked-button class="dc-home__card-button"
+              >Get Start</a
+            >
+          </div>
+        </mat-card-footer>
+      </mat-card>
     </div>
   </div>
-  <br />
+</div>
+<br />
+<div class="container">
+  <div class="row dc-home__card-row">
+    <div class="col">
+      <mat-card class="dc-home__mat-card03">
+        <mat-card-content></mat-card-content>
+        <mat-card-footer>
+          <div class="dc-home__matcard-body">
+            <h2 class="dc-home__matcard-heading">Deliveroo For Work</h2>
+            <p class="dc-home__matcard-paragraph">
+              Looking for a workplace food solution to reward your team, boost
+              morale or treat your clients? Our corporate team can help.
+            </p>
+            <a href="#" mat-stroked-button class="dc-home__card-button"
+              >Get Start</a
+            >
+          </div>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+    <div class="col">
+      <mat-card class="dc-home__mat-card04">
+        <mat-card-content></mat-card-content>
+        <mat-card-footer>
+          <div class="dc-home__matcard-body">
+            <h2 class="dc-home__matcard-heading">Gift Cards</h2>
+            <p class="dc-home__matcard-paragraph">
+              Looking for an easy way to treat your friends and family? Give the
+              gift of great food with a Deliveroo gift card.
+            </p>
+            <a href="#" mat-stroked-button class="dc-home__card-button"
+              >Get Start</a
+            >
+          </div>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
 </div>
