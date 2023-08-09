@@ -5,8 +5,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+
 export class AppComponent {
   defaultCountry = 'united kingdom';
+
   @Output() close = new EventEmitter<void>();
 
   userLogin() {

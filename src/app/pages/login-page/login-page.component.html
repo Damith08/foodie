@@ -3,12 +3,12 @@
     <div
       class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
     >
-      <h1 class="dc__h1">Sign up or log in</h1>
-      <button mat-button class="dc__button--blue">
+      <h1 class="dc-login__h1">Sign up or log in</h1>
+      <button mat-button class="dc-login__button--blue">
         <img src="assets\svg\facebook-icon.svg" alt="Facebook" height="24px" />
         Continue with Facebook
       </button>
-      <button mat-button class="dc__button--white">
+      <button mat-button class="dc-login__button--white">
         <img
           src="assets\svg\google-color-icon.svg"
           alt="Google"
@@ -16,18 +16,22 @@
         />
         Continue with Google
       </button>
-      <button mat-button class="dc__button--black">
+      <button mat-button class="dc-login__button--black">
         <img src="assets\svg\apple-icon.svg" alt="Apple" height="24px" />
         Continue with Apple
       </button>
-      <p class="dc__line">or</p>
-      <button mat-button class="dc__button--green" (click)="onLoadSignin()">
+      <p class="dc-login__line">or</p>
+      <button
+        mat-button
+        class="dc-login__button--green"
+        (click)="onLoadSignin()"
+      >
         <img src="assets\svg\email-icon.svg" alt="Email" height="24px" /><a
           href=""
         ></a>
         Continue with email
       </button>
-      <p class="dc__text">
+      <p class="dc-login__text">
         By continuing you agree to our <a href="">T&Cs</a>. Please also check
         out our <a href="">Privacy Policy</a>. We use your data to offer you a
         personalised experience and to better understand and improve our
@@ -39,14 +43,14 @@
 <div class="container p-5" *ngIf="!showLogin">
   <div class="row d-flex justify-content-center">
     <div
-      class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
+      class="col-12 col-md-5 justify-content-center flex-column align-item-center"
     >
       <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-        <h1 class="dc__h1">Sign up or log in</h1>
-        <div class="dc__inputfield">
+        <h1 class="dc-login__h1">Sign up or log in</h1>
+        <div class="dc-login__inputfield">
           <p>Email address</p>
           <div class="row">
-            <mat-form-field appearance="outline" class="dc__input-field">
+            <mat-form-field appearance="outline" class="dc-login__input-field">
               <input
                 matInput
                 placeholder="e.g.name@example.com"
@@ -62,14 +66,16 @@
             <button
               mat-button
               type="submit"
-              class="dc__continue"
+              class="dc-login__continue"
               [disabled]="form.invalid"
             >
               Continue
             </button>
           </div>
           <div class="row">
-            <button mat-button class="dc dc__forgot">Forgot password</button>
+            <button mat-button class="dc-login dc-login__forgot">
+              Forgot password
+            </button>
           </div>
         </div>
       </form>
