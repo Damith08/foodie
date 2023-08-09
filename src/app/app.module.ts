@@ -20,6 +20,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { SideNavBarComponent } from './common/side-nav-bar/side-nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MatCardModule } from '@angular/material/card';
     LoginPageComponent,
     SignupPageComponent,
     MenuPageComponent,
+    SideNavBarComponent,
   ],
   imports: [
     BrowserModule,
