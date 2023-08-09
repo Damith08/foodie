@@ -5,11 +5,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-
 export class AppComponent {
   defaultCountry = 'united kingdom';
 
-  @Output() close = new EventEmitter<void>();
+  // @Output() close = new EventEmitter<void>();
 
   userLogin() {
     throw new Error('Method not implemented.');
@@ -20,7 +19,7 @@ export class AppComponent {
 
   openSideBar(sidebarOpen: boolean) {}
 
-  onClose() {
-    this.close.emit();
-  }
+  // onClose() {
+  //   this.close.emit();
+  // }
 }
