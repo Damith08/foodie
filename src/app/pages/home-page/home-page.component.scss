@@ -61,10 +61,9 @@
   }
   // discount section
   &__discount-area {
-    padding: 90px;
     flex-direction: column;
     text-align: center;
-    background-color: #00ccbc;
+    background-color: #278490;
     color: #fff;
   }
 
@@ -72,6 +71,7 @@
     font-size: 40px;
     line-height: 48px;
     font-weight: bold;
+    margin-block: 25px;
   }
 
   &__discount-para1 {
@@ -80,6 +80,7 @@
 
   &__discount-para2 {
     font-size: 14px;
+    margin-bottom: 25px;
   }
 
   &__card-heading {
@@ -146,40 +147,51 @@
   }
   //..cards
 
+  &__card {
+    padding: 16px;
+  }
+
   &__card-row {
-    margin-bottom: 36px;
+    margin-bottom: 10px;
   }
 
   &__mat-card01 {
-    background-image: url("https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=464&q=80");
+    background-image: url("https://orderbox.app/assets/images/restaurant.png");
     background-size: cover;
     border-radius: 10px;
     height: 480px;
   }
 
   &__mat-card02 {
-    background-image: url("https://images.unsplash.com/photo-1567961258941-911aa712744f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80");
+    background-image: url("https://orderbox.app/assets/images/rider.png");
     background-size: cover;
     border-radius: 10px;
     height: 480px;
   }
 
   &__mat-card03 {
-    background-image: url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80");
+    background-image: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
     background-size: cover;
     border-radius: 10px;
     height: 480px;
   }
 
   &__mat-card04 {
-    background-image: url("https://images.unsplash.com/photo-1526614180703-827d23e7c8f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80");
+    background-image: url("https://static.kinguin.net/cdn-cgi/image/w=750,q=80,fit=scale-down,f=auto/media/images/products/_deliveroo-giftcardhero.png");
     background-size: cover;
     border-radius: 10px;
     height: 480px;
   }
 
+  &__card-button {
+    height: 52px;
+    width: 162px;
+  }
+
   &__matcard-body {
     margin: 0 148px 24px 24px;
+    position: absolute;
+    bottom: 10px;
   }
 
   &__matcard-heading {
