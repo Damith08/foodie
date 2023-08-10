@@ -1,14 +1,11 @@
-.dc {
-  &__footer {
-    background-color: #2e3333;
-  }
+.dc-footer {
+  background-color: #2e3333;
 
   &__card {
     background-color: #444444;
     padding: 16px;
     list-style: none;
     border-radius: 3px;
-
   }
 
   &__text {
@@ -46,7 +43,6 @@
   &__img {
     fill: aliceblue;
   }
-
 }
 
 .grid-container {
@@ -56,13 +52,10 @@
 }
 .grid-item {
   font-size: 14px;
-  color: #585c5c;;
+  color: #585c5c;
 }
-
 
 .d-flex {
   justify-content: space-between;
   padding: 5px;
 }
-
-
