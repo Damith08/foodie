@@ -51,9 +51,9 @@
 <div class="container">
   <div class="row dc-home__card-row">
     <mat-card>
-      <mat-card-content>
+      <mat-card-content class="dc-home__matcard">
         <div class="row">
-          <div class="col-4">
+          <div class="col">
             <span>
               <h2 class="dc-home__tocheading">Track orders to your door</h2>
             </span>
@@ -81,7 +81,11 @@
             </div>
           </div>
           <div class="col-8">
-            <img src="assets\svg\home\map.avif" alt="map" />
+            <img
+              src="https://img2.storyblok.com/filters:format(webp)/f/62776/x/ca59b51c51/map-min.svg"
+              alt="map"
+              width="100%"
+            />
           </div>
         </div>
       </mat-card-content>
@@ -92,20 +96,25 @@
 <br />
 <div>
   <div class="d-flex dc-home__discount-area">
-    <div>
-      <h2 class="dc-home__discount-heading">Up to 25% off - Meal Deals</h2>
+    <div class="container">
+      <div class="row">
+        <h2 class="dc-home__discount-heading">Up to 25% off - Meal Deals</h2>
+      </div>
+      <div class="row">
+        <p class="dc-home__discount-para1">
+          Need a midweek pick-me-up, a break from cooking for the family or just
+          fancy your favourite restaurant?
+        </p>
+      </div>
+      <div class="row dc-home__discount-para2">
+        <p>
+          Service and delivery fees, subject to availability. Participating
+          restaurants only. T&Cs apply. <a href="" style="color: #fff">Terms</a>
+        </p>
+      </div>
     </div>
-    <div>
-      <p class="dc-home__discount-para1">
-        Need a midweek pick-me-up, a break from cooking for the family or just
-        fancy your favourite restaurant?
-      </p>
-    </div>
-    <div>
-      <p class="dc-home__discount-para2">
-        Service and delivery fees, subject to availability. Participating
-        restaurants only. T&Cs apply. <a href="" style="color: #fff">Terms</a>
-      </p>
+    <div class="row">
+      <img src="assets\svg\home\merch-itemrow@2x.09d506d7.svg" alt="" />
     </div>
   </div>
 </div>
@@ -113,7 +122,7 @@
 
 <div class="container">
   <div class="row dc-home__card-row align-items-end">
-    <div class="col">
+    <div class="col-md dc-home__card">
       <mat-card class="dc-home__mat-card01">
         <mat-card-content></mat-card-content>
         <mat-card-footer>
@@ -123,16 +132,24 @@
               Join Deliveroo and reach more customers than ever. We handle
               delivery, so you can focus on the food.
             </p>
-            <a href="#" mat-stroked-button class="dc-home__card-button"
-              >Get Start</a
-            >
+            <div class="d-flex">
+              <div class="row" style="margin-left: 0px">
+                <a href="#" mat-stroked-button class="dc-home__card-button"
+                  >Get Start
+                  <img
+                    src="assets\svg\home\arrows-cards.svg"
+                    alt="arrow"
+                    width="28px"
+                /></a>
+              </div>
+            </div>
           </div>
+          <br />
         </mat-card-footer>
       </mat-card>
     </div>
-    <div class="col">
+    <div class="col-md dc-home__card">
       <mat-card class="dc-home__mat-card02">
-        <mat-card-content></mat-card-content>
         <mat-card-footer>
           <div class="dc-home__matcard-body">
             <h2 class="dc-home__matcard-heading">Ride with us</h2>
@@ -140,21 +157,27 @@
               The freedom to fit work around your life. Plus great fees, perks
               and discounts.
             </p>
-            <a href="#" mat-stroked-button class="dc-home__card-button"
-              >Get Start</a
-            >
+            <div class="d-flex">
+              <div class="row" style="margin-left: 0px">
+                <a href="#" mat-stroked-button class="dc-home__card-button"
+                  >Get Start
+                  <img
+                    src="assets\svg\home\arrows-cards.svg"
+                    alt="arrow"
+                    width="28px"
+                /></a>
+              </div>
+            </div>
           </div>
         </mat-card-footer>
       </mat-card>
     </div>
   </div>
 </div>
-<br />
 <div class="container">
   <div class="row dc-home__card-row">
-    <div class="col">
+    <div class="col-md dc-home__card">
       <mat-card class="dc-home__mat-card03">
-        <mat-card-content></mat-card-content>
         <mat-card-footer>
           <div class="dc-home__matcard-body">
             <h2 class="dc-home__matcard-heading">Deliveroo For Work</h2>
@@ -162,16 +185,23 @@
               Looking for a workplace food solution to reward your team, boost
               morale or treat your clients? Our corporate team can help.
             </p>
-            <a href="#" mat-stroked-button class="dc-home__card-button"
-              >Get Start</a
-            >
+            <div class="d-flex">
+              <div class="row" style="margin-left: 0px">
+                <a href="#" mat-stroked-button class="dc-home__card-button"
+                  >Get Start
+                  <img
+                    src="assets\svg\home\arrows-cards.svg"
+                    alt="arrow"
+                    width="28px"
+                /></a>
+              </div>
+            </div>
           </div>
         </mat-card-footer>
       </mat-card>
     </div>
-    <div class="col">
+    <div class="col-md dc-home__card">
       <mat-card class="dc-home__mat-card04">
-        <mat-card-content></mat-card-content>
         <mat-card-footer>
           <div class="dc-home__matcard-body">
             <h2 class="dc-home__matcard-heading">Gift Cards</h2>
@@ -179,9 +209,17 @@
               Looking for an easy way to treat your friends and family? Give the
               gift of great food with a Deliveroo gift card.
             </p>
-            <a href="#" mat-stroked-button class="dc-home__card-button"
-              >Get Start</a
-            >
+            <div class="d-flex">
+              <div class="row" style="margin-left: 0px">
+                <a href="#" mat-stroked-button class="dc-home__card-button"
+                  >Get Start
+                  <img
+                    src="assets\svg\home\arrows-cards.svg"
+                    alt="arrow"
+                    width="28px"
+                /></a>
+              </div>
+            </div>
           </div>
         </mat-card-footer>
       </mat-card>

@@ -1,18 +1,18 @@
 <header>
-  <div class="container dc__header">
-    <div class="row dc__row">
-      <div class="d-flex dc__flex">
+  <div class="container dc-header">
+    <div class="row dc-header__row">
+      <div class="d-flex dc-header__flex">
         <a routerLink="/"
           ><img
             src="assets\svg\deliveroo-logo.svg"
             alt="deliveroo-logo"
             style="width: 144px; height: 32px"
         /></a>
-        <div class="d-flex dc__flex">
+        <div class="d-flex dc-header__flex">
           <div style="padding-right: 4px">
             <button
               mat-stroked-button
-              class="d-none d-md-block dc__button"
+              class="d-none d-md-block dc-header__button"
               type="button"
             >
               <img
@@ -23,7 +23,7 @@
               />
               Partner with us
               <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <select matNativeControl required class="dc__language">
+                <select matNativeControl required class="dc-header__language">
                   <option value="english">English</option>
                   <option value="english">English</option>
                   <option value="english">English</option>
@@ -37,7 +37,7 @@
           <div style="padding: 0px 4px 0px 4px">
             <button
               mat-stroked-button
-              class="d-none d-sm-block dc__button"
+              class="d-none d-sm-block dc-header__button"
               (click)="onLoadLogin()"
             >
               <img
@@ -53,7 +53,7 @@
           <div style="padding-left: 4px">
             <button
               mat-stroked-button
-              class="dc__button"
+              class="dc-header__button"
               (click)="toggle()"
               style="margin-bottom: 3px"
             >

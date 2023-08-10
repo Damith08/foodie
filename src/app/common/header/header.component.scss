@@ -1,9 +1,6 @@
-.dc {
-
-  &__header {
-    justify-content: space-between;
-    padding-top: 14px;
-  }
+.dc-header {
+  justify-content: space-between;
+  padding-top: 14px;
 
   &__row {
     flex-wrap: nowrap;
@@ -13,9 +10,7 @@
     justify-content: space-between;
   }
 
-  &__button{
+  &__button {
     background-color: #fff;
   }
-
 }
-
