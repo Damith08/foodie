@@ -17,8 +17,8 @@ import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import { FormsModule } from '@angular/forms';
-import { NgFor } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgFor, NgIf } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { SideNavBarComponent } from './common/side-nav-bar/side-nav-bar.component';
 
@@ -45,7 +45,9 @@ import { SideNavBarComponent } from './common/side-nav-bar/side-nav-bar.componen
     FormsModule,
     MatSelectModule,
     NgFor,
-    [MatCardModule],
+    MatCardModule,
+    ReactiveFormsModule,
+    NgIf,
   ],
   providers: [MatIconRegistry],
   bootstrap: [AppComponent],
