@@ -58,8 +58,11 @@
                 ngModel
                 name="email"
                 required
-                email
+                [formControl]="email"
               />
+              <mat-error *ngIf="email.invalid">{{
+                getErrorMessage()
+              }}</mat-error>
             </mat-form-field>
           </div>
           <div class="row">
