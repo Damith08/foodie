@@ -68,26 +68,18 @@
         <div class="row">
           <mat-form-field appearance="outline">
             <select matNativeControl required class="dc-nav__language">
-              <option value="english">English</option>
+              <option *ngFor="let language of languages" value="language.value">
+                {{ language.name }}
+              </option>
             </select>
           </mat-form-field>
         </div>
         <div class="row dc-nav__countries">
           <mat-form-field appearance="outline">
-            <select matNativeControl required [ngModel]="defaultCountry">
-              <option value="australia">Australia</option>
-              <option value="belgium">Belgium</option>
-              <option value="france">France</option>
-              <option value="germany">Germany</option>
-              <option value="ireland">Ireland</option>
-              <option value="italy">Italy</option>
-              <option value="kuwait">Kuwait</option>
-              <option value="nether lands">Nether lands</option>
-              <option value="qatar">Qatar</option>
-              <option value="singapore">Singapore</option>
-              <option value="taiwan">Taiwan</option>
-              <option value="united arab amirates">United Arab Emirates</option>
-              <option value="united kingdom">United Kingdom</option>
+            <select matNativeControl required>
+              <option *ngFor="let country of countries" value="country.value">
+                {{ country.name }}
+              </option>
             </select>
           </mat-form-field>
         </div>
