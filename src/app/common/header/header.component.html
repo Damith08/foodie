@@ -16,6 +16,7 @@
               routerLink=""
               [routerLinkActive]="'active'"
               [routerLinkActiveOptions]="{ exact: true }"
+              *ngIf="!isLoginPage"
             >
               <img
                 src="assets\svg\header\drop-down.svg"
