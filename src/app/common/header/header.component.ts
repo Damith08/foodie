@@ -1,26 +1,20 @@
-import { Component, Output, EventEmitter, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-  isLoginPage: boolean = false;
-
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute,
-  ) {}
+export class HeaderComponent {
   @Output() sidenav: EventEmitter<any> = new EventEmitter();
+
   showFiller = false;
 
-  ngOnInit(): void {
-    // Check if the current route is the login page
-    this.route.url.subscribe((url) => {
-      this.isLoginPage = url.join('/') === 'login';
-    });
+  constructor(private router: Router) {}
+
+  get isHomePage(): boolean {
+    return this.router.url === '/';
   }
 
   toggle() {
