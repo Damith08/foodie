@@ -13,10 +13,7 @@
             <button
               mat-stroked-button
               class="d-none d-md-block dc-header__button"
-              routerLink=""
-              [routerLinkActive]="'active'"
-              [routerLinkActiveOptions]="{ exact: true }"
-              *ngIf="!isLoginPage"
+              *ngIf="isHomePage"
             >
               <img
                 src="assets\svg\header\drop-down.svg"
