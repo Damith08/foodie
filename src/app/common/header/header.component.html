@@ -12,6 +12,7 @@
           <div style="padding-right: 4px">
             <button
               mat-stroked-button
+              [matMenuTriggerFor]="menu"
               class="d-none d-md-block dc-header__button"
               *ngIf="isHomePage"
             >
@@ -22,18 +23,46 @@
                 width="15px"
               />
               Partner with us
-              <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <select matNativeControl required class="dc-header__language">
-                  <option value="english">English</option>
-                  <option value="english">English</option>
-                  <option value="english">English</option>
-                </select>
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div> -->
             </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <img
+                  src="assets\svg\header\dropdown\bicycle.svg"
+                  alt="question-mark-icon"
+                  height="24"
+                  width="24"
+                />
+                Riders
+              </button>
+              <button mat-menu-item>
+                <img
+                  src="assets\svg\header\dropdown\restaurant.svg"
+                  height="24"
+                  width="24"
+                />
+                Restaurant
+              </button>
+              <button mat-menu-item>
+                <img
+                  src="assets\svg\header\dropdown\briefcase.svg"
+                  alt="question-mark-icon"
+                  height="24"
+                  width="24"
+                />
+                Careers
+              </button>
+              <button mat-menu-item>
+                <img
+                  src="assets\svg\header\dropdown\shop.svg"
+                  alt="question-mark-icon"
+                  height="24"
+                  width="24"
+                />
+                Deliveroo for Work
+              </button>
+            </mat-menu>
           </div>
+
           <div style="padding: 0px 4px 0px 4px">
             <button
               mat-stroked-button
