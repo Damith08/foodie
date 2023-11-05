@@ -55,7 +55,7 @@
                 matInput
                 placeholder="e.g.name@example.com"
                 type="email"
-                ngModel
+                [(ngModel)]="model.email"
                 name="email"
                 required
                 [formControl]="email"
@@ -65,12 +65,30 @@
               }}</mat-error>
             </mat-form-field>
           </div>
+
+          <div class="row">
+            <mat-form-field appearance="outline" class="dc-login__input-field">
+              <input
+                matInput
+                placeholder="password"
+                type="password"
+                [(ngModel)]="model.password"
+                name="password"
+                required
+              />
+              <mat-error *ngIf="email.invalid">{{
+                getErrorMessage()
+              }}</mat-error>
+            </mat-form-field>
+          </div>
+
           <div class="row">
             <button
               mat-button
               type="submit"
               class="dc-login__continue"
               [disabled]="form.invalid"
+              (click)="loginUser()"
             >
               Continue
             </button>
