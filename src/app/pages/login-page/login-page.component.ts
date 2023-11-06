@@ -15,6 +15,7 @@ export class LoginPageComponent {
   password = new FormControl('', [Validators.required]);
 
   getErrorMessage() {
+    console.log('rendered');
     if (this.email.hasError('required')) {
       return 'You must enter a value';
     }
@@ -28,7 +29,7 @@ export class LoginPageComponent {
   ) {}
 
   model: any = {};
-  getData: boolean = false;
+  getData: boolean = true;
 
   onLoadSignin() {
     this.showLogin = false;
@@ -46,11 +47,11 @@ export class LoginPageComponent {
     let password = this.model.password;
     console.log(email + ' ' + password);
 
-    this.loginService.getUserDetails(email, password).subscribe((res: any) => {
+    this.loginService.loginDetails(email, password).subscribe((res: any) => {
       this.getData = res;
 
       if (this.getData == true) {
-        this.router.navigate(['/menu/']);
+        this.router.navigate(['/menu']);
       } else {
         alert('Invalid username or password');
       }
