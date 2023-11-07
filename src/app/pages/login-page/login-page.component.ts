@@ -14,14 +14,14 @@ export class LoginPageComponent {
   email = new FormControl('', [Validators.required, Validators.email]);
   password = new FormControl('', [Validators.required]);
 
-  getErrorMessage() {
-    console.log('rendered');
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
+  // getErrorMessage() {
+  //   console.log('rendered');
+  //   if (this.email.hasError('required')) {
+  //     return 'You must enter a value';
+  //   }
 
-    return this.email.hasError('email') ? 'Not a valid email' : '';
-  }
+  //   return this.email.hasError('email') ? 'Not a valid email' : '';
+  // }
 
   constructor(
     private router: Router,
