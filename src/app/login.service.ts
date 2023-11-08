@@ -7,7 +7,8 @@ import { Injectable } from '@angular/core';
 export class LoginService {
   constructor(private http: HttpClient) {}
 
-  loginDetails(email: string, password: string) {
+  emailDetails(email: string, password: string) {
+    console.log(email, password);
     return this.http.post('http://localhost:3000/auth/login', {
       email: email,
       password: password,

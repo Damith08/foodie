@@ -11,17 +11,9 @@ import { LoginService } from 'src/app/login.service';
 })
 export class LoginPageComponent {
   showLogin = true;
+  showEmailField = true;
   email = new FormControl('', [Validators.required, Validators.email]);
   password = new FormControl('', [Validators.required]);
-
-  // getErrorMessage() {
-  //   console.log('rendered');
-  //   if (this.email.hasError('required')) {
-  //     return 'You must enter a value';
-  //   }
-
-  //   return this.email.hasError('email') ? 'Not a valid email' : '';
-  // }
 
   constructor(
     private router: Router,
@@ -47,10 +39,11 @@ export class LoginPageComponent {
     let password = this.model.password;
     console.log(email + ' ' + password);
 
-    this.loginService.loginDetails(email, password).subscribe((res: any) => {
+    this.loginService.emailDetails(email, password).subscribe((res: any) => {
+      console.log(res);
       this.getData = res;
 
-      if (this.getData == true) {
+      if (res.success) {
         this.router.navigate(['/menu']);
       } else {
         alert('Invalid username or password');

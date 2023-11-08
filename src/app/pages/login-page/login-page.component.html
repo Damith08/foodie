@@ -60,28 +60,31 @@
                 required
                 [formControl]="email"
               />
-              <mat-error *ngIf="email.invalid"
-                >This field is required</mat-error
+              <mat-error *ngIf="email.hasError('required')"
+                >Email field is required</mat-error
               >
-              <mat-error *ngIf="email.invalid">add valid email</mat-error>
+              <mat-error *ngIf="email.hasError('email')"
+                >Enter a valid email</mat-error
+              >
             </mat-form-field>
           </div>
 
-          <!-- <div class="row">
+          <div class="row">
             <mat-form-field appearance="outline" class="dc-login__input-field">
               <input
                 matInput
-                placeholder="password"
+                placeholder="Enter a password"
                 type="password"
                 [(ngModel)]="model.password"
                 name="password"
                 required
+                [formControl]="password"
               />
-              <mat-error *ngIf="email.invalid">{{
-                getErrorMessage()
-              }}</mat-error>
+              <mat-error *ngIf="email.hasError('required')"
+                >Password field is required</mat-error
+              >
             </mat-form-field>
-          </div> -->
+          </div>
 
           <div class="row">
             <button
