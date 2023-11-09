@@ -20,14 +20,8 @@ export class LoginPageComponent {
     private loginService: LoginService,
   ) {}
 
-  model: any = {};
-  getData: boolean = true;
-
   onLoadSignin() {
     this.showLogin = false;
-    // this.router.navigate(['/signup'], { skipLocationChange: true });
-    // if(!this.showLogin) {
-    //   return this.showSignup
   }
 
   onSubmit(form: NgForm) {
@@ -35,13 +29,15 @@ export class LoginPageComponent {
   }
 
   loginUser() {
-    let email = this.model.email;
-    let password = this.model.password;
-    console.log(email + ' ' + password);
+    const email = this.email.value;
+    const password = this.password.value;
+
+    if (!email || !password) {
+      return;
+    }
 
     this.loginService.emailDetails(email, password).subscribe((res: any) => {
       console.log(res);
-      this.getData = res;
 
       if (res.success) {
         this.router.navigate(['/menu']);
@@ -50,4 +46,23 @@ export class LoginPageComponent {
       }
     });
   }
+  loadSigninPage() {
+    this.router.navigate(['/signup']);
+  }
 }
+
+// step = 0
+
+// password field -> ngIf -> step === 1
+
+// (click)=onClickContinue()
+
+// onContinue ->
+
+// step === 0 or not
+
+// step === 0  -> loginService.checkEmail() -> response -> user exists or not -> userExists = true/false
+
+// if userExists === true -> step = 1
+
+// if userExists === false -> step = 2
