@@ -4,14 +4,79 @@
       class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
     >
       <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-        <h1 class="dc__h1">Sign up or log in</h1>
+        <h1 class="dc__h1">User Registration</h1>
         <div class="dc__inputfield">
-          <p>Email address</p>
+          <p>First Name</p>
+          <div class="row">
+            <mat-form-field appearance="outline" class="dc__input-field">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="e.g.John"
+                [(ngModel)]="model.firstName"
+                name="firstName"
+                required
+                [formControl]="firstName"
+              />
+              <mat-error *ngIf="firstName.hasError('required')"
+                >Fist Name field is required</mat-error
+              >
+            </mat-form-field>
+          </div>
+          <p>Last Name</p>
+          <div class="row">
+            <input
+              class="form-control dc__input"
+              type="text"
+              placeholder="e.g.Smith"
+              ngModel
+              name="text"
+              required
+              lastName
+            />
+          </div>
+          <p>Username</p>
+          <div class="row">
+            <input
+              class="form-control dc__input"
+              type="text"
+              placeholder="e.g.JohnSmith0123"
+              ngModel
+              name="text"
+              required
+              username
+            />
+          </div>
+          <p>Address</p>
+          <div class="row">
+            <input
+              class="form-control dc__input"
+              type="text"
+              placeholder="No 5A, 3rd lane, Pita Kotte, Sri Lanka"
+              ngModel
+              name="text"
+              required
+              address
+            />
+          </div>
+          <p>Contact No</p>
+          <div class="row">
+            <input
+              class="form-control dc__input"
+              type="tel"
+              placeholder="94775775775"
+              ngModel
+              name="tel"
+              required
+              contactNumber
+            />
+          </div>
+          <p>Email</p>
           <div class="row">
             <input
               class="form-control dc__input"
               type="email"
-              placeholder="e.g.name@example.com"
+              placeholder="e.g.john.smith@gmail.com"
               ngModel
               name="email"
               required
@@ -19,6 +84,17 @@
             />
           </div>
           <p>Password</p>
+          <div class="row">
+            <input
+              class="form-control dc__input"
+              type="password"
+              placeholder="password"
+              ngModel
+              name="password"
+              required
+              password
+            />
+          </div>
           <div class="row">
             <button
               mat-button
@@ -28,9 +104,6 @@
             >
               Continue
             </button>
-          </div>
-          <div class="row">
-            <button mat-button class="dc dc__forgot">Forgot password</button>
           </div>
         </div>
       </form>
