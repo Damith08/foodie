@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FormControl, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/login.service';
 
 @Component({
@@ -12,6 +11,7 @@ import { LoginService } from 'src/app/login.service';
 export class LoginPageComponent {
   showLogin = true;
   showEmailField = true;
+  showPasswordField = false;
   email = new FormControl('', [Validators.required, Validators.email]);
   password = new FormControl('', [Validators.required]);
 
@@ -22,6 +22,15 @@ export class LoginPageComponent {
 
   onLoadSignin() {
     this.showLogin = false;
+    this.showEmailField = true;
+  }
+
+  // Check the email before showing the password
+  onContinue() {
+    if (this.email.valid) {
+      this.showEmailField = false;
+      this.showPasswordField = true;
+    }
   }
 
   onSubmit(form: NgForm) {
@@ -50,19 +59,3 @@ export class LoginPageComponent {
     this.router.navigate(['/signup']);
   }
 }
-
-// step = 0
-
-// password field -> ngIf -> step === 1
-
-// (click)=onClickContinue()
-
-// onContinue ->
-
-// step === 0 or not
-
-// step === 0  -> loginService.checkEmail() -> response -> user exists or not -> userExists = true/false
-
-// if userExists === true -> step = 1
-
-// if userExists === false -> step = 2
