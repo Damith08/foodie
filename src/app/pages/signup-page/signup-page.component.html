@@ -4,107 +4,163 @@
       class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
     >
       <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-        <h1 class="dc__h1">User Registration</h1>
-        <div class="dc__inputfield">
-          <p>First Name</p>
+        <h1 class="row dc-signup__h1">User Registration</h1>
+        <div class="dc-signup__inputfield">
+          <p class="row">First Name</p>
           <div class="row">
-            <mat-form-field appearance="outline" class="dc__input-field">
+            <mat-form-field appearance="outline" class="dc-signup__input-field">
               <input
-                class="form-control"
+                matInput
                 type="text"
                 placeholder="e.g.John"
-                [(ngModel)]="model.firstName"
                 name="firstName"
                 required
                 [formControl]="firstName"
               />
               <mat-error *ngIf="firstName.hasError('required')"
-                >Fist Name field is required</mat-error
+                >First Name field is required</mat-error
               >
             </mat-form-field>
           </div>
-          <p>Last Name</p>
-          <div class="row">
-            <input
-              class="form-control dc__input"
-              type="text"
-              placeholder="e.g.Smith"
-              ngModel
-              name="text"
-              required
-              lastName
-            />
+          <div class="dc-signup__input-field">
+            <p class="row">Last Name</p>
+            <div class="row">
+              <mat-form-field
+                appearance="outline"
+                class="dc-signup__input-field"
+              >
+                <input
+                  matInput
+                  type="text"
+                  placeholder="e.g.Smith"
+                  name="lastName"
+                  required
+                  [formControl]="lastName"
+                />
+                <mat-error *ngIf="lastName.hasError('required')"
+                  >Last Name field is required</mat-error
+                >
+              </mat-form-field>
+            </div>
           </div>
-          <p>Username</p>
-          <div class="row">
-            <input
-              class="form-control dc__input"
-              type="text"
-              placeholder="e.g.JohnSmith0123"
-              ngModel
-              name="text"
-              required
-              username
-            />
+          <div class="dc-signup__input-field">
+            <p class="row">Username</p>
+            <div class="row">
+              <mat-form-field
+                appearance="outline"
+                class="dc-signup__input-field"
+              >
+                <input
+                  matInput
+                  type="text"
+                  placeholder="e.g.JohnSmith0123"
+                  name="username"
+                  required
+                  [formControl]="username"
+                />
+                <mat-error *ngIf="username.hasError('required')"
+                  >Username field is required</mat-error
+                >
+              </mat-form-field>
+            </div>
           </div>
-          <p>Address</p>
-          <div class="row">
-            <input
-              class="form-control dc__input"
-              type="text"
-              placeholder="No 5A, 3rd lane, Pita Kotte, Sri Lanka"
-              ngModel
-              name="text"
-              required
-              address
-            />
+          <div class="dc-signup__input-field">
+            <p class="row">Address</p>
+            <div class="row">
+              <mat-form-field
+                appearance="outline"
+                class="dc-signup__input-field"
+              >
+                <input
+                  matInput
+                  type="text"
+                  placeholder="No 5A, 3rd lane, Pita Kotte, Sri Lanka"
+                  name="address"
+                  required
+                  [formControl]="address"
+                />
+                <mat-error *ngIf="address.hasError('required')"
+                  >Address field is required</mat-error
+                >
+              </mat-form-field>
+            </div>
           </div>
-          <p>Contact No</p>
-          <div class="row">
-            <input
-              class="form-control dc__input"
-              type="tel"
-              placeholder="94775775775"
-              ngModel
-              name="tel"
-              required
-              contactNumber
-            />
+          <div class="dc-signup__input-field">
+            <p class="row">Contact No</p>
+            <div class="row">
+              <mat-form-field
+                appearance="outline"
+                class="dc-signup__input-field"
+              >
+                <input
+                  matInput
+                  type="tel"
+                  placeholder="94775775775"
+                  name="contactNumber"
+                  required
+                  [formControl]="contactNumber"
+                />
+                <mat-error *ngIf="contactNumber.hasError('required')"
+                  >Contact number field is required</mat-error
+                >
+              </mat-form-field>
+            </div>
           </div>
-          <p>Email</p>
-          <div class="row">
-            <input
-              class="form-control dc__input"
-              type="email"
-              placeholder="e.g.john.smith@gmail.com"
-              ngModel
-              name="email"
-              required
-              email
-            />
+          <div class="dc-signup__input-field">
+            <p class="row">Email</p>
+            <div class="row">
+              <mat-form-field
+                appearance="outline"
+                class="dc-signup__input-field"
+              >
+                <input
+                  matInput
+                  type="email"
+                  placeholder="e.g.john.smith@gmail.com"
+                  name="email"
+                  required
+                  [formControl]="email"
+                />
+                <mat-error *ngIf="email.hasError('required')"
+                  >Email field is required</mat-error
+                >
+                <mat-error *ngIf="email.hasError('email')"
+                  >Enter a valid email</mat-error
+                >
+              </mat-form-field>
+            </div>
           </div>
-          <p>Password</p>
-          <div class="row">
-            <input
-              class="form-control dc__input"
-              type="password"
-              placeholder="password"
-              ngModel
-              name="password"
-              required
-              password
-            />
+          <div class="dc-signup__input-field">
+            <p class="row">Password</p>
+            <div class="row">
+              <mat-form-field
+                appearance="outline"
+                class="dc-signup__input-field"
+              >
+                <input
+                  matInput
+                  type="password"
+                  placeholder="password"
+                  name="password"
+                  required
+                  [formControl]="password"
+                />
+                <mat-error *ngIf="password.hasError('required')"
+                  >Password field is required</mat-error
+                >
+              </mat-form-field>
+            </div>
           </div>
-          <div class="row">
-            <button
-              mat-button
-              type="submit"
-              class="dc dc__continue"
-              [disabled]="!f.valid"
-            >
-              Continue
-            </button>
-          </div>
+        </div>
+        <div class="row">
+          <button
+            mat-button
+            type="submit"
+            class="dc-signup dc-signup__continue"
+            [disabled]="!f.valid"
+          >
+            Signin
+          </button>
         </div>
       </form>
     </div>
