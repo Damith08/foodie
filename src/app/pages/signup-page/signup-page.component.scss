@@ -1,6 +1,5 @@
-.dc {
-
-  &__input{
+.dc-signup {
+  &__input {
     border: 1px solid #e8ebeb;
     padding: 12px 16px;
     padding-bottom: 16px;
@@ -19,21 +18,18 @@
     margin-bottom: 14px;
   }
 
-  &__forgot {
-    border: 1px solid #e8ebeb;
-    background-color: #fff;
-    color: #00b8a9;
-    font-weight: 400;
-    height: 48px;
-    margin-top: 14px;
-    margin-bottom: 14px;
-  }
-
   &__h1 {
     color: #2e3333;
-    font-family: plex-sans,sans-serif;
+    font-family: plex-sans, sans-serif;
     font-size: 22px;
     line-height: 28px;
     font-weight: 700;
+  }
+
+  &__input-field {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    display: contents;
   }
 }

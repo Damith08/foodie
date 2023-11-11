@@ -47,7 +47,7 @@
     >
       <form (ngSubmit)="onSubmit(form)" #form="ngForm">
         <h1 class="dc-login__h1">Sign up or log in</h1>
-        <div class="dc-login__inputfield">
+        <div class="dc-login__inputfield" *ngIf="showEmailField">
           <p>Email address</p>
           <div class="row">
             <mat-form-field appearance="outline" class="dc-login__input-field">
@@ -55,22 +55,26 @@
                 matInput
                 placeholder="e.g.name@example.com"
                 type="email"
-                ngModel
                 name="email"
                 required
                 [formControl]="email"
               />
-              <mat-error *ngIf="email.invalid">{{
-                getErrorMessage()
-              }}</mat-error>
+              <mat-error *ngIf="email.hasError('required')"
+                >Email field is required</mat-error
+              >
+              <mat-error *ngIf="email.hasError('email')"
+                >Enter a valid email</mat-error
+              >
             </mat-form-field>
           </div>
+
           <div class="row">
             <button
               mat-button
               type="submit"
               class="dc-login__continue"
               [disabled]="form.invalid"
+              (click)="onContinue()"
             >
               Continue
             </button>
@@ -78,6 +82,45 @@
           <div class="row">
             <button mat-button class="dc-login dc-login__forgot">
               Forgot password
+            </button>
+          </div>
+          <div class="row">
+            <button
+              mat-button
+              class="dc-login__continue"
+              (click)="loadSigninPage()"
+            >
+              Signin
+            </button>
+          </div>
+        </div>
+        <div class="row" *ngIf="!showEmailField">
+          <p>Password</p>
+          <div class="row">
+            <mat-form-field appearance="outline" class="dc-login__input-field">
+              <input
+                matInput
+                placeholder="Enter a password"
+                type="password"
+                name="password"
+                required
+                [formControl]="password"
+              />
+              <mat-error *ngIf="password.hasError('required')"
+                >Password field is required</mat-error
+              >
+            </mat-form-field>
+          </div>
+
+          <div class="row">
+            <button
+              mat-button
+              type="submit"
+              class="dc-login__continue"
+              [disabled]="form.invalid"
+              (click)="loginUser()"
+            >
+              Login
             </button>
           </div>
         </div>
