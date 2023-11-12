@@ -14,4 +14,25 @@ export class LoginService {
       password: password,
     });
   }
+
+  signinDetails(
+    firstName: string,
+    lastName: string,
+    username: string,
+    address: string,
+    // contactNumber: number,
+    email: string,
+    password: string,
+  ) {
+    console.log(firstName, lastName, username, address, email, password);
+    return this.http.post('http://localhost:3000/auth/signup', {
+      firstName: firstName,
+      lastName: lastName,
+      username: username,
+      address: address,
+      // contactNumber: contactNumber,
+      email: email,
+      password: password,
+    });
+  }
 }

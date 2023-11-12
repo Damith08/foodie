@@ -46,9 +46,9 @@
       class="col-12 col-md-5 justify-content-center flex-column align-item-center"
     >
       <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-        <h1 class="dc-login__h1">Sign up or log in</h1>
-        <div class="dc-login__inputfield" *ngIf="showEmailField">
-          <p>Email address</p>
+        <h1 class="row dc-login__h1">Sign up or log in</h1>
+        <div class="row dc-login__inputfield" *ngIf="showEmailField">
+          <p class="row">Email address</p>
           <div class="row">
             <mat-form-field appearance="outline" class="dc-login__input-field">
               <input
@@ -95,7 +95,7 @@
           </div>
         </div>
         <div class="row" *ngIf="!showEmailField">
-          <p>Password</p>
+          <p class="row">Password</p>
           <div class="row">
             <mat-form-field appearance="outline" class="dc-login__input-field">
               <input
