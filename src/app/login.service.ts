@@ -1,15 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
+interface LoginResponse {
+  success: boolean;
+}
 @Injectable({
   providedIn: 'root',
 })
 export class LoginService {
   constructor(private http: HttpClient) {}
 
-  emailDetails(email: string, password: string) {
+  emailDetails(email: string, password: string): Observable<LoginResponse> {
     console.log(email, password);
-    return this.http.post('http://localhost:3000/auth/login', {
+    return this.http.post<LoginResponse>('http://localhost:3000/auth/login', {
       email: email,
       password: password,
     });
