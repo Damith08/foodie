@@ -2,4 +2,75 @@
   &__heading {
     font-weight: bold;
   }
+
+  &__back {
+    text-decoration: none;
+    color: #00b8a9;
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+
+  &__arrow-back {
+    width: 38px;
+    padding-right: 10px;
+  }
+
+  &__info-button {
+    background-color: transparent;
+    border: none;
+    padding-top: 16px;
+  }
+
+  &__info-img {
+    width: 24px;
+    margin-right: 14px;
+  }
+
+  &__next-icon {
+    width: 28px;
+    margin-left: 14px;
+  }
+
+  &__text1 {
+    display: flex;
+    font-size: 16px;
+  }
+
+  &__text2 {
+    display: flex;
+    font-size: 14px;
+  }
+
+  &__review-button {
+    background-color: transparent;
+    border: none;
+    padding-top: 16px;
+  }
+
+  &__deliver {
+    text-decoration: none;
+  }
+
+  &__deliver-icon {
+    width: 26px;
+    margin-right: 12px;
+  }
+
+  &__location-text {
+    color: #cc3a2f;
+    margin-right: 10px;
+  }
+
+  &__change-text {
+    color: #00b8a9;
+  }
+
+  &__group-order-btn {
+    background-color: #fff;
+  }
+
+  &__group-img {
+    width: 26px;
+    padding-right: 8px;
+  }
 }
