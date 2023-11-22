@@ -3,7 +3,7 @@
     <div
       class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
     >
-      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <form (ngSubmit)="onSubmit(form)" #form="ngForm">
         <h1 class="row dc-signup__h1">User Registration</h1>
         <div class="dc-signup__inputfield">
           <p class="row">First Name</p>
@@ -94,7 +94,7 @@
               >
                 <input
                   matInput
-                  type="tel"
+                  type="number"
                   placeholder="94775775775"
                   name="contactNumber"
                   required
@@ -157,7 +157,8 @@
             mat-button
             type="submit"
             class="dc-signup dc-signup__continue"
-            [disabled]="!f.valid"
+            [disabled]="!form.valid"
+            (click)="signinUser()"
           >
             Signin
           </button>
