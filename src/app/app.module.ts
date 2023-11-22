@@ -23,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { SideNavBarComponent } from './common/side-nav-bar/side-nav-bar.component';
+import { RestaurantMenuComponent } from './pages/menu-page/restaurant-menu/restaurant-menu.component';
+import { BasketComponent } from './pages/menu-page/basket/basket.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { SideNavBarComponent } from './common/side-nav-bar/side-nav-bar.componen
     SignupPageComponent,
     MenuPageComponent,
     SideNavBarComponent,
+    RestaurantMenuComponent,
+    BasketComponent,
   ],
   imports: [
     BrowserModule,
