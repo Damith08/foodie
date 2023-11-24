@@ -1,0 +1,17 @@
+.dc-menu--horizontal-bar {
+  list-style-type: none;
+  overflow: hidden;
+
+  &__list {
+    float: left;
+  }
+
+  &__button {
+    background-color: transparent;
+    color: #00b8a9;
+    border-radius: 16px;
+    border: none;
+    padding: 2px 16px;
+    font-size: 14px;
+  }
+}

@@ -78,4 +78,16 @@
     width: 26px;
     padding-right: 8px;
   }
+
+  &__horizontal-bar {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    display: grid;
+    box-shadow: 0 2px 4px;
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    font-size: 20px;
+  }
 }
