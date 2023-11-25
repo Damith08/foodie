@@ -1,0 +1,57 @@
+.dc-menu-card-list {
+  &__heading {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2e3333;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #585c5c;
+  }
+
+  &__mat-card {
+    margin-bottom: 15px;
+  }
+
+  &__card-heading {
+    color: #2e3333;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__card-description {
+    color: #585c5c;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__price-details {
+    display: block;
+  }
+
+  &__black-text {
+    color: #2e3333;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__popular-text {
+    color: #e67400;
+  }
+
+  &__img {
+    width: 98px;
+  }
+
+  &__add-button {
+    width: 40px;
+    height: 100px;
+  }
+
+  &__button-img {
+    width: 10px;
+    height: 10px;
+  }
+}
