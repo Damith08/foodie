@@ -8,6 +8,18 @@
             alt="deliveroo-logo"
             style="width: 144px; height: 32px"
         /></a>
+        <div class="d-flex">
+          <div class="row" *ngIf="isMenuPage">
+            <div>
+              <img src="assets/svg/header/search.svg" alt="search-icon" />
+              <input
+                class="dc-header__search-bar"
+                matInput
+                placeholder="Search"
+              />
+            </div>
+          </div>
+        </div>
         <div class="d-flex dc-header__flex">
           <div style="padding-right: 4px">
             <button
