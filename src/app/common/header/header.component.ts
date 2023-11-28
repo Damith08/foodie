@@ -13,6 +13,10 @@ export class HeaderComponent {
 
   constructor(private router: Router) {}
 
+  get isMenuPage(): boolean {
+    return this.router.url === '/menu';
+  }
+
   get isHomePage(): boolean {
     return this.router.url === '/';
   }
