@@ -1,7 +1,9 @@
-.dc-menu--horizontal-bar {
+.dc-menu-horizontal-bar {
   list-style-type: none;
   overflow: hidden;
-
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
   &__list {
     float: left;
   }
