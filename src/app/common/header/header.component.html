@@ -107,8 +107,8 @@
 <!-- This header only works in the menu route -->
 <header *ngIf="isMenuPage">
   <div class="container">
-    <div class="row">
-      <div class="col-sm col-md-2 dc-header">
+    <div class="row dc-header">
+      <div class="col-sm col-md-2" style="margin-top: 10px">
         <a routerLink="/"
           ><img
             src="assets\svg\deliveroo-logo.svg"
@@ -117,7 +117,7 @@
         /></a>
       </div>
       <div class="col-sm col-md-8">
-        <div class="row">
+        <div class="row" style="margin-top: 10px">
           <img
             src="assets/svg/header/search.svg"
             alt="search-icon"
@@ -128,7 +128,7 @@
       </div>
       <div class="col-sm col-md-2">
         <div class="dc-header__flex">
-          <div style="padding-left: 4px">
+          <div class="dc-header__menu-button">
             <button
               mat-stroked-button
               class="dc-header__button"

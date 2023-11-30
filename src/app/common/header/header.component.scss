@@ -1,6 +1,5 @@
 .dc-header {
   justify-content: space-between;
-  padding-top: 14px;
 
   &__search-bar {
     max-width: 100%;
@@ -20,6 +19,11 @@
 
   &__flex {
     justify-content: space-between;
+  }
+
+  &__menu-button {
+    margin-top: 10px;
+    padding-left: 4px;
   }
 
   &__button {
