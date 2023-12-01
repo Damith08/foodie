@@ -2,11 +2,11 @@
   padding: 64px 16px 104px;
 
   &__background-color {
-    background-color: rgb(0, 0, 0);
+    background-color: #000;
   }
 
   &__landingh1 {
-    color: #fff;
+    color: #fd4901;
     text-align: center;
     font-size: 32px;
     line-height: 48px;
@@ -29,8 +29,8 @@
     border: none;
   }
 
-  &__searchbtn {
-    background-color: #00ccbc;
+  &__search-btn {
+    background-color: #d61212;
     color: #fff;
     border-radius: 100px;
   }
@@ -44,7 +44,7 @@
   }
 
   &__logintext {
-    color: #00ccbc;
+    color: #fd4901;
     text-decoration: none;
   }
 
@@ -59,11 +59,11 @@
     font-size: 20px;
     margin-top: 16px;
   }
-  // discount section
+
   &__discount-area {
     flex-direction: column;
     text-align: center;
-    background-color: #278490;
+    background-color: #ba2222;
     color: #fff;
   }
 
@@ -156,28 +156,28 @@
   }
 
   &__mat-card01 {
-    background-image: url("https://orderbox.app/assets/images/restaurant.png");
+    background-image: url("/../assets/images/chefs.png");
     background-size: cover;
     border-radius: 10px;
     height: 480px;
   }
 
   &__mat-card02 {
-    background-image: url("https://orderbox.app/assets/images/rider.png");
+    background-image: url("/../assets/images/delivery-girl.png");
     background-size: cover;
     border-radius: 10px;
     height: 480px;
   }
 
   &__mat-card03 {
-    background-image: url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+    background-image: url("/../assets/images/food-table1.png");
     background-size: cover;
     border-radius: 10px;
     height: 480px;
   }
 
   &__mat-card04 {
-    background-image: url("https://static.kinguin.net/cdn-cgi/image/w=750,q=80,fit=scale-down,f=auto/media/images/products/_deliveroo-giftcardhero.png");
+    background-image: url("/../assets/images/gift-voucher.png");
     background-size: cover;
     border-radius: 10px;
     height: 480px;
@@ -202,6 +202,6 @@
 
   &__matcard-paragraph {
     font-size: 18px;
-    color: #fff;
+    color: #e34406;
   }
 }

@@ -19,6 +19,7 @@
 
   &__flex {
     justify-content: space-between;
+    margin-top: 10px;
   }
 
   &__menu-button {
@@ -28,5 +29,11 @@
 
   &__button {
     background-color: #fff;
+  }
+
+  &__menu-header-logo {
+    width: 144px;
+    height: 49px;
+    margin-top: 5px;
   }
 }
