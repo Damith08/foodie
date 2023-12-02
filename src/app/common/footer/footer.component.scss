@@ -8,11 +8,14 @@
     border-radius: 3px;
   }
 
+  &__list-spacing {
+    margin-bottom: 6px;
+  }
+
   &__text {
     color: #fff;
-    font-size: 14px;
+    font-size: 15.6px;
     line-height: 19px;
-    padding-top: 24px;
     text-decoration: none;
   }
   &__text:hover {
@@ -40,8 +43,31 @@
     list-style: none;
   }
 
-  &__img {
-    fill: aliceblue;
+  &__facebook-img {
+    width: 27px;
+  }
+
+  &__facebook-img:hover {
+    filter: invert(70%) sepia(100%) saturate(162.5) hue-rotate(216deg);
+  }
+
+  &__twitter-img {
+    filter: invert(1);
+    width: 27px;
+  }
+
+  &__twitter-img:hover {
+    filter: invert(70%) sepia(100%) saturate(162.5) hue-rotate(216deg);
+  }
+
+  &__instagram-img {
+    filter: invert(1);
+    width: 33px;
+  }
+
+  &__instagram-img:hover {
+    filter: invert(51%) sepia(8%) saturate(45) hue-rotate(-60deg)
+      brightness(77%) contrast(417%);
   }
 }
 
