@@ -1,14 +1,14 @@
-<mat-drawer-container class="dc-nav__container" autosize>
+<mat-drawer-container class="fw-nav__container" autosize>
   <app-header (sidenav)="drawer.toggle()"></app-header>
   <mat-drawer
     #drawer
-    class="sidenav dc-nav__sidebar"
+    class="sidenav fw-nav__sidebar"
     mode="over"
     position="end"
   >
-    <div class="container dc-nav dc-nav__sidenav">
+    <div class="container fw-nav fw-nav__sidenav">
       <div class="row">
-        <div class="col dc-nav__nav-icons">
+        <div class="col fw-nav__nav-icons">
           <a href="">
             <img
               src="assets/svg/foodie logo - no background.svg"
@@ -24,62 +24,62 @@
         </div>
       </div>
       <hr />
-      <div class="container dc-nav__sidnavbtn" style="display: grid">
-        <button mat-button class="dc-nav__signup">
-          <a class="dc-nav__navtext" routerLink="login">Sign up or log in</a>
+      <div class="container fw-nav__sidnavbtn" style="display: grid">
+        <button mat-button class="fw-nav__signup">
+          <a class="fw-nav__navtext" routerLink="login">Sign up or log in</a>
         </button>
       </div>
       <div class="container" style="padding-bottom: 186px">
-        <a class="d-md-none dc-nav__faqs" href=""
+        <a class="d-md-none fw-nav__faqs" href=""
           ><img
             src="assets\svg\nav-svgs\bicycle.svg"
             alt="question-mark-icon"
             height="24"
             width="24"
           />
-          <span class="dc-nav__faqs-text"><p>Become a Rider</p></span></a
+          <span class="fw-nav__faqs-text"><p>Become a Rider</p></span></a
         >
-        <a class="d-md-none dc-nav__faqs" href=""
+        <a class="d-md-none fw-nav__faqs" href=""
           ><img
             src="assets\svg\nav-svgs\eat.svg"
             alt="eat"
             height="24"
             width="24"
           />
-          <span class="dc-nav__faqs-text"><p>Add your restaurant</p></span></a
+          <span class="fw-nav__faqs-text"><p>Add your restaurant</p></span></a
         >
-        <a class="d-md-none dc-nav__faqs" href=""
+        <a class="d-md-none fw-nav__faqs" href=""
           ><img
             src="assets\svg\nav-svgs\office-building.svg"
             alt="question-mark-icon"
             height="24"
             width="24"
           />
-          <span class="d-md-none dc-nav__faqs-text"
+          <span class="d-md-none fw-nav__faqs-text"
             ><p>Sign up your office</p></span
           ></a
         >
-        <a class="dc-nav__faqs" href=""
+        <a class="fw-nav__faqs" href=""
           ><img
             src="assets\svg\nav-svgs\question-mark-icon.svg"
             alt="question-mark-icon"
             height="24"
             width="24"
           />
-          <span class="dc-nav__faqs-text"><p>FAQs</p></span></a
+          <span class="fw-nav__faqs-text"><p>FAQs</p></span></a
         >
       </div>
-      <div class="container dc-nav__lables">
+      <div class="container fw-nav__lables">
         <div class="row">
           <mat-form-field appearance="outline">
-            <select matNativeControl required class="dc-nav__language">
+            <select matNativeControl required class="fw-nav__language">
               <option *ngFor="let language of languages" value="language.value">
                 {{ language.name }}
               </option>
             </select>
           </mat-form-field>
         </div>
-        <div class="row dc-nav__countries">
+        <div class="row fw-nav__countries">
           <mat-form-field appearance="outline">
             <select matNativeControl required>
               <option *ngFor="let country of countries" value="country.value">

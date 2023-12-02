@@ -1,4 +1,4 @@
-.dc-header {
+.fw-header {
   justify-content: space-between;
 
   &__search-bar {
@@ -20,6 +20,32 @@
   &__flex {
     justify-content: space-between;
     margin-top: 10px;
+  }
+
+  &__drop-down {
+    height: 15px;
+    width: 15px;
+    filter: invert(75%) sepia(100%) saturate(163.5);
+  }
+
+  &__drop-down-imgs {
+    height: 24px;
+    width: 24px;
+    filter: invert(75%) sepia(100%) saturate(163.5);
+  }
+
+  &__signup-img {
+    height: 17px;
+    width: 17px;
+    margin-bottom: 3px;
+    filter: invert(75%) sepia(100%) saturate(163.5);
+  }
+
+  &__menu-img {
+    height: 15px;
+    width: 15px;
+    margin-bottom: 3px;
+    filter: invert(75%) sepia(100%) saturate(163.5);
   }
 
   &__menu-button {

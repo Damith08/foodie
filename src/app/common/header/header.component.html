@@ -1,26 +1,25 @@
 <header *ngIf="!isMenuPage">
-  <div class="container dc-header">
+  <div class="container fw-header">
     <div class="row">
-      <div class="d-flex dc-header__flex">
-        <a routerLink="/" class="dc-header__foodie-logo"
+      <div class="d-flex fw-header__flex">
+        <a routerLink="/" class="fw-header__foodie-logo"
           ><img
             src="assets/svg/foodie logo - no background.svg"
-            alt="deliveroo-logo"
+            alt="foodie-logo"
             style="width: 144px; height: 49px"
         /></a>
-        <div class="d-flex dc-header__flex">
+        <div class="d-flex fw-header__flex">
           <div style="padding-right: 4px">
             <button
               mat-stroked-button
               [matMenuTriggerFor]="menu"
-              class="d-none d-md-block dc-header__button"
+              class="d-none d-md-block fw-header__button"
               *ngIf="isHomePage"
             >
               <img
                 src="assets\svg\header\drop-down.svg"
                 alt="drop-down"
-                height="15px"
-                width="15px"
+                class="fw-header__drop-down"
               />
               Partner with us
             </button>
@@ -29,8 +28,7 @@
                 <img
                   src="assets\svg\header\dropdown\bicycle.svg"
                   alt="question-mark-icon"
-                  height="24"
-                  width="24"
+                  class="fw-header__drop-down-imgs"
                 />
                 Riders
               </button>
@@ -38,8 +36,7 @@
                 <img
                   src="assets\svg\header\dropdown\restaurant.svg"
                   alt="restaurant"
-                  height="24"
-                  width="24"
+                  class="fw-header__drop-down-imgs"
                 />
                 Restaurant
               </button>
@@ -47,8 +44,7 @@
                 <img
                   src="assets\svg\header\dropdown\briefcase.svg"
                   alt="question-mark-icon"
-                  height="24"
-                  width="24"
+                  class="fw-header__drop-down-imgs"
                 />
                 Careers
               </button>
@@ -56,8 +52,7 @@
                 <img
                   src="assets\svg\header\dropdown\shop.svg"
                   alt="question-mark-icon"
-                  height="24"
-                  width="24"
+                  class="fw-header__drop-down-imgs"
                 />
                 Deliveroo for Work
               </button>
@@ -67,15 +62,13 @@
           <div style="padding: 0px 4px 0px 4px">
             <button
               mat-stroked-button
-              class="d-none d-sm-block dc-header__button"
+              class="d-none d-sm-block fw-header__button"
               (click)="onLoadLogin()"
             >
               <img
                 src="assets\svg\home.svg"
                 alt="signup"
-                height="17"
-                width="17"
-                style="margin-bottom: 3px"
+                class="fw-header__signup-img"
               />
               Signup or login
             </button>
@@ -83,16 +76,14 @@
           <div style="padding-left: 4px">
             <button
               mat-stroked-button
-              class="dc-header__button"
+              class="fw-header__button"
               (click)="toggle()"
               style="margin-bottom: 3px"
             >
               <img
                 src="assets\svg\menu.svg"
                 alt="menu"
-                height="15px"
-                width="15px"
-                style="margin-bottom: 3px"
+                class="fw-header__menu-img"
               />
               Menu
             </button>
@@ -107,13 +98,13 @@
 <!-- This header only works in the menu route -->
 <header *ngIf="isMenuPage">
   <div class="container">
-    <div class="row dc-header">
+    <div class="row fw-header">
       <div class="col-sm col-md-2">
         <a routerLink="/"
           ><img
             src="assets/svg/foodie logo - no background.svg"
             alt="foodie-logo"
-            class="dc-header__menu-header-logo"
+            class="fw-header__menu-header-logo"
             style="width: 144px; height: 49px"
         /></a>
       </div>
@@ -122,17 +113,17 @@
           <img
             src="assets/svg/header/search.svg"
             alt="search-icon"
-            class="dc-header__search-img"
+            class="fw-header__search-img"
           />
-          <input class="dc-header__search-bar" matInput placeholder="Search" />
+          <input class="fw-header__search-bar" matInput placeholder="Search" />
         </div>
       </div>
       <div class="col-sm col-md-2">
-        <div class="dc-header__flex">
-          <div class="dc-header__menu-button">
+        <div class="fw-header__flex">
+          <div class="fw-header__menu-button">
             <button
               mat-stroked-button
-              class="dc-header__button"
+              class="fw-header__button"
               (click)="toggle()"
               style="margin-bottom: 3px"
             >

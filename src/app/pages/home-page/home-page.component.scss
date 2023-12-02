@@ -1,4 +1,4 @@
-.dc-home {
+.fw-home {
   padding: 64px 16px 104px;
 
   &__background-color {
@@ -137,7 +137,7 @@
   }
 
   &__search-btn {
-    background-color: #00ccbc;
+    background-color: #ba2222;
     font-weight: 900;
     color: #fff;
     border: none;
@@ -163,7 +163,7 @@
   }
 
   &__mat-card02 {
-    background-image: url("/../assets/images/delivery-girl1.png");
+    background-image: url("/../assets/images/delivery-girl4.png");
     background-size: cover;
     border-radius: 10px;
     height: 480px;
@@ -198,6 +198,11 @@
     font-size: 28px;
     font-weight: 600;
     color: #fff;
+  }
+
+  &__arrow-img {
+    width: 28px;
+    filter: invert(75%) sepia(100%) saturate(163.5);
   }
 
   &__matcard-paragraph {

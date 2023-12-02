@@ -4,11 +4,11 @@
       class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
     >
       <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-        <h1 class="row dc-signup__h1">User Registration</h1>
-        <div class="dc-signup__inputfield">
+        <h1 class="row fw-signup__h1">User Registration</h1>
+        <div class="fw-signup__inputfield">
           <p class="row">First Name</p>
           <div class="row">
-            <mat-form-field appearance="outline" class="dc-signup__input-field">
+            <mat-form-field appearance="outline" class="fw-signup__input-field">
               <input
                 matInput
                 type="text"
@@ -22,12 +22,12 @@
               >
             </mat-form-field>
           </div>
-          <div class="dc-signup__input-field">
+          <div class="fw-signup__input-field">
             <p class="row">Last Name</p>
             <div class="row">
               <mat-form-field
                 appearance="outline"
-                class="dc-signup__input-field"
+                class="fw-signup__input-field"
               >
                 <input
                   matInput
@@ -43,12 +43,12 @@
               </mat-form-field>
             </div>
           </div>
-          <div class="dc-signup__input-field">
+          <div class="fw-signup__input-field">
             <p class="row">Username</p>
             <div class="row">
               <mat-form-field
                 appearance="outline"
-                class="dc-signup__input-field"
+                class="fw-signup__input-field"
               >
                 <input
                   matInput
@@ -64,12 +64,12 @@
               </mat-form-field>
             </div>
           </div>
-          <div class="dc-signup__input-field">
+          <div class="fw-signup__input-field">
             <p class="row">Address</p>
             <div class="row">
               <mat-form-field
                 appearance="outline"
-                class="dc-signup__input-field"
+                class="fw-signup__input-field"
               >
                 <input
                   matInput
@@ -85,12 +85,12 @@
               </mat-form-field>
             </div>
           </div>
-          <div class="dc-signup__input-field">
+          <div class="fw-signup__input-field">
             <p class="row">Contact No</p>
             <div class="row">
               <mat-form-field
                 appearance="outline"
-                class="dc-signup__input-field"
+                class="fw-signup__input-field"
               >
                 <input
                   matInput
@@ -106,12 +106,12 @@
               </mat-form-field>
             </div>
           </div>
-          <div class="dc-signup__input-field">
+          <div class="fw-signup__input-field">
             <p class="row">Email</p>
             <div class="row">
               <mat-form-field
                 appearance="outline"
-                class="dc-signup__input-field"
+                class="fw-signup__input-field"
               >
                 <input
                   matInput
@@ -130,12 +130,12 @@
               </mat-form-field>
             </div>
           </div>
-          <div class="dc-signup__input-field">
+          <div class="fw-signup__input-field">
             <p class="row">Password</p>
             <div class="row">
               <mat-form-field
                 appearance="outline"
-                class="dc-signup__input-field"
+                class="fw-signup__input-field"
               >
                 <input
                   matInput
@@ -156,7 +156,7 @@
           <button
             mat-button
             type="submit"
-            class="dc-signup dc-signup__continue"
+            class="fw-signup fw-signup__continue"
             [disabled]="!form.valid"
             (click)="signinUser()"
           >
