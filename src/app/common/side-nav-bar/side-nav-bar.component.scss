@@ -6,7 +6,8 @@
 
   &__close-img {
     width: 24px;
-    filter: invert(75%) sepia(100%) saturate(163.5);
+    filter: invert(46%) sepia(27%) saturate(13) hue-rotate(-60deg)
+      brightness(80%) contrast(275%);
   }
   &__signup {
     margin-top: 10px;

@@ -24,6 +24,8 @@
   &__star-img {
     width: 16px;
     margin-right: 5px;
+    filter: invert(37%) sepia(165%) saturate(23) hue-rotate(-230deg)
+      brightness(80%) contrast(275%);
   }
 
   &__popular-text {

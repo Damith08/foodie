@@ -13,6 +13,8 @@
   &__arrow-back {
     width: 38px;
     padding-right: 10px;
+    filter: invert(46%) sepia(27%) saturate(13) hue-rotate(-60deg)
+      brightness(80%) contrast(275%);
   }
 
   &__main-img {
@@ -31,9 +33,18 @@
     margin-right: 14px;
   }
 
+  &__star-img {
+    width: 24px;
+    margin-right: 14px;
+    filter: invert(37%) sepia(165%) saturate(23) hue-rotate(-230deg)
+      brightness(80%) contrast(275%);
+  }
+
   &__next-icon {
     width: 28px;
     margin-left: 14px;
+    filter: invert(46%) sepia(27%) saturate(13) hue-rotate(-60deg)
+      brightness(80%) contrast(275%);
   }
 
   &__text1 {
@@ -79,6 +90,8 @@
   &__group-img {
     width: 26px;
     padding-right: 8px;
+    filter: invert(46%) sepia(27%) saturate(13) hue-rotate(-60deg)
+      brightness(80%) contrast(275%);
   }
 
   &__horizontal-bar {
