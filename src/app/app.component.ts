@@ -1,19 +1,32 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+  ) {}
   defaultCountry = 'united kingdom';
 
   // @Output() close = new EventEmitter<void>();
+  ngOnInit() {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.isHomeRoute();
+      });
+  }
 
   userLogin() {
     throw new Error('Method not implemented.');
   }
-  title = 'deliveroo-clone';
+  title = 'foodie-web';
   showFiller = false;
   sidenav: any;
 
@@ -22,4 +35,8 @@ export class AppComponent {
   // onClose() {
   //   this.close.emit();
   // }
+
+  isHomeRoute(): boolean {
+    return this.router.url === '/';
+  }
 }

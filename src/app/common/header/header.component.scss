@@ -63,3 +63,11 @@
     margin-top: 5px;
   }
 }
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000; /* Adjust the z-index based on your needs */
+  background-color: white;
+}

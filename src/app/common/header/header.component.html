@@ -96,49 +96,55 @@
 </header>
 
 <!-- This header only works in the menu route -->
-<header *ngIf="isMenuPage">
-  <div class="container">
-    <div class="row fw-header">
-      <div class="col-sm col-md-2">
-        <a routerLink="/"
-          ><img
-            src="assets/svg/foodie logo - no background.svg"
-            alt="foodie-logo"
-            class="fw-header__menu-header-logo"
-            style="width: 144px; height: 49px"
-        /></a>
-      </div>
-      <div class="col-sm col-md-8">
-        <div class="row" style="margin-top: 10px">
-          <img
-            src="assets/svg/header/search.svg"
-            alt="search-icon"
-            class="fw-header__search-img"
-          />
-          <input class="fw-header__search-bar" matInput placeholder="Search" />
+<div class="fixed-header">
+  <header *ngIf="isMenuPage">
+    <div class="container">
+      <div class="row fw-header">
+        <div class="col-sm col-md-2">
+          <a routerLink="/"
+            ><img
+              src="assets/svg/foodie logo - no background.svg"
+              alt="foodie-logo"
+              class="fw-header__menu-header-logo"
+              style="width: 144px; height: 49px"
+          /></a>
         </div>
-      </div>
-      <div class="col-sm col-md-2">
-        <div class="fw-header__flex">
-          <div class="fw-header__menu-button">
-            <button
-              mat-stroked-button
-              class="fw-header__button"
-              (click)="toggle()"
-              style="margin-bottom: 3px"
-            >
-              <img
-                src="assets\svg\menu.svg"
-                alt="menu"
-                class="fw-header__menu-img"
-              />
-              Menu
-            </button>
+        <div class="col-sm col-md-8">
+          <div class="row" style="margin-top: 10px">
+            <img
+              src="assets/svg/header/search.svg"
+              alt="search-icon"
+              class="fw-header__search-img"
+            />
+            <input
+              class="fw-header__search-bar"
+              matInput
+              placeholder="Search"
+            />
+          </div>
+        </div>
+        <div class="col-sm col-md-2">
+          <div class="fw-header__flex">
+            <div class="fw-header__menu-button">
+              <button
+                mat-stroked-button
+                class="fw-header__button"
+                (click)="toggle()"
+                style="margin-bottom: 3px"
+              >
+                <img
+                  src="assets\svg\menu.svg"
+                  alt="menu"
+                  class="fw-header__menu-img"
+                />
+                Menu
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <hr />
-</header>
+    <hr />
+  </header>
+</div>
