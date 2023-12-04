@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 
@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
   ) {}
   defaultCountry = 'united kingdom';
 
-  // @Output() close = new EventEmitter<void>();
   ngOnInit() {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
