@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -80,6 +81,7 @@ import { DrinksComponent } from './pages/menu-page/dish-category-bar/drinks/drin
     MatInputModule,
     MatFormFieldModule,
     MatMenuModule,
+    MatProgressBarModule,
     FormsModule,
     MatSelectModule,
     NgFor,

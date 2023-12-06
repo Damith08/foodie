@@ -1,73 +1,9 @@
-<!-- <div class="container">
-  <ul class="fw-menu-horizontal-bar">
-    <li
-    *ngFor="let category of category | async"
-      class="fw-menu--horizontal-bar__list"
-    >
-      <button class="fw-menu-horizontal-bar__button">{{ category.name}}</button>
-    </li> -->
-
-<!-- <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">
-        Premium Edition Set !
-      </button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">
-        Top Selling Single Set Meal
-      </button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">
-        #Double Delight Meal
-      </button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">
-        #Mix & Match Combo Bundles
-      </button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">
-        Ultimate Seabass Is Here !
-      </button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">
-        Bento Series 便当系列
-      </button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">Noodles 面类</button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">Porridge 粥品</button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">
-        Fried Rice & Claypot Rice 石锅炒饭和煲仔饭
-      </button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">Meat 肉类</button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">
-        Handmade Beancurd 手工豆腐
-      </button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">Vegetables 菜类</button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">Drinks 饮料</button>
-    </li> -->
-<!-- </ul>
-</div> -->
 <div class="container">
+  <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+
   <ul class="fw-menu-horizontal-bar">
     <li
-      *ngFor="let category of category | async"
+      *ngFor="let category of categories"
       class="fw-menu--horizontal-bar__list"
     >
       <button class="fw-menu-horizontal-bar__button">

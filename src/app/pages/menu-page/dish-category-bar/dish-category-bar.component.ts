@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryListService } from '../category-list.service';
-import { Observable } from 'rxjs';
 import { Category } from './category';
 
 @Component({
@@ -9,7 +8,8 @@ import { Category } from './category';
   styleUrls: ['./dish-category-bar.component.scss'],
 })
 export class DishCategoryBarComponent implements OnInit {
-  category!: Observable<Category[]>;
+  categories: Category[] = [];
+  isLoading = false;
 
   constructor(private categoryService: CategoryListService) {}
 
@@ -18,6 +18,15 @@ export class DishCategoryBarComponent implements OnInit {
   }
 
   reloadData() {
-    this.category = this.categoryService.getCategoryList();
+    this.isLoading = true;
+    this.categoryService.getCategoryList().subscribe({
+      next: (res) => {
+        this.categories = res.data;
+        this.isLoading = false;
+      },
+      error: (err) => {
+        this.isLoading = false;
+      },
+    });
   }
 }
