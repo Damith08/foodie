@@ -1,9 +1,13 @@
-<div class="container">
+<!-- <div class="container">
   <ul class="fw-menu-horizontal-bar">
-    <li class="fw-menu--horizontal-bar__list">
-      <button class="fw-menu-horizontal-bar__button">#Don't say bojio!</button>
-    </li>
-    <li class="fw-menu-horizontal-bar__list">
+    <li
+    *ngFor="let category of category | async"
+      class="fw-menu--horizontal-bar__list"
+    >
+      <button class="fw-menu-horizontal-bar__button">{{ category.name}}</button>
+    </li> -->
+
+<!-- <li class="fw-menu-horizontal-bar__list">
       <button class="fw-menu-horizontal-bar__button">
         Premium Edition Set !
       </button>
@@ -57,6 +61,18 @@
     </li>
     <li class="fw-menu-horizontal-bar__list">
       <button class="fw-menu-horizontal-bar__button">Drinks 饮料</button>
+    </li> -->
+<!-- </ul>
+</div> -->
+<div class="container">
+  <ul class="fw-menu-horizontal-bar">
+    <li
+      *ngFor="let category of category | async"
+      class="fw-menu--horizontal-bar__list"
+    >
+      <button class="fw-menu-horizontal-bar__button">
+        {{ category.name }}
+      </button>
     </li>
   </ul>
 </div>
