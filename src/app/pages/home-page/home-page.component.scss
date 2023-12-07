@@ -6,7 +6,7 @@
   }
 
   &__landingh1 {
-    color: #fd4901;
+    color: #f27c0e;
     text-align: center;
     font-size: 32px;
     line-height: 48px;
@@ -44,7 +44,7 @@
   }
 
   &__logintext {
-    color: #fd4901;
+    color: #f27c0e;
     text-decoration: none;
   }
 
@@ -63,7 +63,7 @@
   &__discount-area {
     flex-direction: column;
     text-align: center;
-    background-color: #ba2222;
+    background-color: #de0d2c;
     color: #fff;
   }
 
@@ -134,10 +134,7 @@
   &__search-btn {
     margin-top: 5px;
     margin-right: 5px;
-  }
-
-  &__search-btn {
-    background-color: #ba2222;
+    background-color: #de0d2c;
     font-weight: 900;
     color: #fff;
     border: none;

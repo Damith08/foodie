@@ -1,13 +1,14 @@
 .fw-menu {
-  margin-top: 50px;
+  margin-top: 79px;
 
   &__heading {
     font-weight: bold;
+    color: #393e46;
   }
 
   &__back {
     text-decoration: none;
-    color: #ba2222;
+    color: #de0d2c;
     padding-top: 8px;
     padding-bottom: 16px;
   }
@@ -76,12 +77,12 @@
   }
 
   &__location-text {
-    color: #ccaa2f;
+    color: #f27c0e;
     margin-right: 10px;
   }
 
   &__change-text {
-    color: #ba2222;
+    color: #de0d2c;
   }
 
   &__group-order-btn {
