@@ -20,21 +20,29 @@ export class LoginService {
   }
 
   signinDetails(
-    firstName: string,
-    lastName: string,
+    first_name: string,
+    last_name: string,
     username: string,
     address: string,
-    // contactNumber: number,
+    contact: string,
     email: string,
     password: string,
   ) {
-    console.log(firstName, lastName, username, address, email, password);
+    console.log(
+      first_name,
+      last_name,
+      username,
+      address,
+      contact,
+      email,
+      password,
+    );
     return this.http.post('http://localhost:3000/auth/signup', {
-      firstName: firstName,
-      lastName: lastName,
+      first_name: first_name,
+      last_name: last_name,
       username: username,
       address: address,
-      // contactNumber: contactNumber,
+      contact: contact,
       email: email,
       password: password,
     });

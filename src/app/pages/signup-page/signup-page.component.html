@@ -157,7 +157,7 @@
             mat-button
             type="submit"
             class="fw-signup fw-signup__continue"
-            [disabled]="!form.valid"
+            [disabled]="form.invalid"
             (click)="signinUser()"
           >
             Signin

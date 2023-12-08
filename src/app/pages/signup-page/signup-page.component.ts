@@ -39,14 +39,22 @@ export class SignupPageComponent {
       !last_name ||
       !username ||
       !address ||
-      contact_number ||
+      !contact_number ||
       !email ||
       !password
     ) {
       return;
     }
     this.loginService
-      .signinDetails(first_name, last_name, username, address, email, password)
+      .signinDetails(
+        first_name,
+        last_name,
+        username,
+        address,
+        contact_number,
+        email,
+        password,
+      )
       .subscribe((res: any) => {
         console.log(res);
         if (res.success) {
