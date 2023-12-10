@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/login.service';
+
 @Component({
   selector: 'app-signup-page',
   templateUrl: './signup-page.component.html',
