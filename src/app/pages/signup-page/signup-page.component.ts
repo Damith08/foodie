@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from 'src/app/login.service';
+import { SignupService } from './signup.service';
 
 @Component({
   selector: 'app-signup-page',
@@ -9,53 +9,35 @@ import { LoginService } from 'src/app/login.service';
   styleUrls: ['./signup-page.component.scss'],
 })
 export class SignupPageComponent {
-  // public user = { email: '' };
-
-  firstName = new FormControl('', [Validators.required]);
-  lastName = new FormControl('', [Validators.required]);
-  username = new FormControl('', [Validators.required]);
-  address = new FormControl('', [Validators.required]);
-  contactNumber = new FormControl('', [Validators.required]);
-  email = new FormControl('', [Validators.required, Validators.email]);
-  password = new FormControl('', [Validators.required]);
+  userRegisterForm;
+  firstName: string = '';
+  lastName: string = '';
+  username: string = '';
+  address: string = '';
+  contact: string = '';
+  email: string = '';
+  password: string = '';
 
   constructor(
     private router: Router,
-    private loginService: LoginService,
-  ) {}
+    private signupService: SignupService,
+  ) {
+    this.userRegisterForm = new FormGroup({
+      firstName: new FormControl('', [Validators.required]),
+      lastName: new FormControl('', [Validators.required]),
+      username: new FormControl('', [Validators.required]),
+      address: new FormControl('', [Validators.required]),
+      contact: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required]),
+    });
+  }
 
-  onSubmit(form: NgForm) {}
+  //
 
-  signinUser() {
-    const first_name = this.firstName.value;
-    const last_name = this.lastName.value;
-    const username = this.username.value;
-    const address = this.address.value;
-    const contact_number = this.contactNumber.value;
-    const email = this.email.value;
-    const password = this.password.value;
-
-    if (
-      !first_name ||
-      !last_name ||
-      !username ||
-      !address ||
-      !contact_number ||
-      !email ||
-      !password
-    ) {
-      return;
-    }
-    this.loginService
-      .signinDetails(
-        first_name,
-        last_name,
-        username,
-        address,
-        contact_number,
-        email,
-        password,
-      )
+  onSubmit() {
+    this.signupService
+      .signinDetails(this.userRegisterForm.value)
       .subscribe((res: any) => {
         console.log(res);
         if (res.success) {
