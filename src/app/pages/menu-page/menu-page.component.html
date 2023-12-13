@@ -11,8 +11,9 @@
     </div>
     <div class="row">
       <div class="d-flex col-xl-4 col-md-4">
+        <mat-spinner mode="indeterminate" *ngIf="isLoading"></mat-spinner>
         <img
-          src="assets\images\card-chef.png"
+          src="{{ restaurants.image }}"
           alt="menu"
           class="fw-menu__main-img"
         />
@@ -20,16 +21,20 @@
       <div class="d-flex col-xl-8 col-md-8">
         <div class="row">
           <div class="col-xl-7">
-            <h1 class="fw-menu__heading">A-One Signature - Chinatown Point</h1>
+            <h1 class="fw-menu__heading">
+              {{ restaurants.name }}
+            </h1>
             <div>
-              <span>Chinese </span>
-              <span>·Noodles </span>
-              <span>·Singaporean</span>
+              <span>{{ restaurants.tag[0] }} </span>
+              <span>.{{ restaurants.tag[1] }} </span>
+              <span>.{{ restaurants.tag[2] }}</span>
             </div>
             <div>
-              <span class="col">Opens at 10:30 </span>
-              <span class="col">·$12.00 minimum</span>
-              <span class="col"> ·$3.00 delivery</span>
+              <span class="col">Opens at {{ restaurants.closeAt }} </span>
+              <span class="col">·${{ restaurants.minimum }} minimum</span>
+              <span class="col">
+                ·${{ restaurants.deliveryCharge }} delivery</span
+              >
             </div>
             <div>
               <button class="fw-menu__info-button">

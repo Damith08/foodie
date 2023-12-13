@@ -22,6 +22,7 @@ export class DishCategoryBarComponent implements OnInit {
     this.categoryService.getCategoryList().subscribe({
       next: (res) => {
         this.categories = res.data;
+        console.log(this.categories);
         this.isLoading = false;
       },
       error: (err) => {
