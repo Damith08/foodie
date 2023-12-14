@@ -1,8 +1,12 @@
 <div class="row">
-  <h1 class="fw-menu-card-list__heading">Bento Series 便当系列</h1>
+  <h1 class="fw-menu-card-list__heading" *ngFor="let dish of dishes">
+    {{ dish.dishCategory.name }}
+  </h1>
 </div>
 <div class="row">
-  <p class="fw-menu-card-list__text">Bento Series 便当系列</p>
+  <p class="fw-menu-card-list__text" *ngFor="let dish of dishes">
+    {{ dish.dishCategory.name }}
+  </p>
 </div>
 <div class="row">
   <div class="col-xl">
@@ -11,13 +15,18 @@
         <mat-card-content>
           <div class="row">
             <div class="col-8">
-              <span class="fw-menu-card-list__card-heading">
-                1001 Gong Bao Chicken Set 宫保鸡丁套餐.
+              <span
+                class="fw-menu-card-list__card-heading"
+                *ngFor="let dish of dishes"
+              >
+                {{ dish.name }}
               </span>
               <br />
-              <span class="fw-menu-card-list__card-description">
-                Signature aone gongbao chicken served with 2 different
-                vegetables of the day!
+              <span
+                class="fw-menu-card-list__card-description"
+                *ngFor="let dish of dishes"
+              >
+                {{ dish.description }}
               </span>
               <div class="row">
                 <div class="fw-menu-card-list__price-details">
