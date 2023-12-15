@@ -26,6 +26,6 @@ export class HeaderComponent {
   }
 
   onLoadLogin() {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/auth/login']);
   }
 }

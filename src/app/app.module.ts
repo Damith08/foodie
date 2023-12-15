@@ -10,8 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './common/footer/footer.component';
 import { HeaderComponent } from './common/header/header.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
@@ -49,8 +48,7 @@ import { DrinksComponent } from './pages/menu-page/dish-category-bar/drinks/drin
     FooterComponent,
     HeaderComponent,
     HomePageComponent,
-    LoginPageComponent,
-    SignupPageComponent,
+
     MenuPageComponent,
     SideNavBarComponent,
     RestaurantMenuComponent,
