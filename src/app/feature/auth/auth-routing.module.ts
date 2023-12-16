@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LoginPageComponent } from 'src/app/pages/login-page/login-page.component';
-import { SignupPageComponent } from 'src/app/pages/signup-page/signup-page.component';
+import { LoginPageComponent } from 'src/app/feature/auth/pages/login-page/login-page.component';
+import { SignupPageComponent } from 'src/app/feature/auth/pages/signup-page/signup-page.component';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: '', // localhost:4200/auth
     component: LoginPageComponent,
   },
   {
-    path: 'signup',
+    path: 'login', // localhost:4200/auth/login
+    component: LoginPageComponent,
+  },
+  {
+    path: 'signup', // localhost:4200/auth/signup
     component: SignupPageComponent,
   },
 ];

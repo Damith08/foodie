@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm, FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from 'src/app/feature/auth/service/auth.service';
-import { Subscription } from 'rxjs';
-
-interface LoginResponse {
-  success: boolean;
-}
+import { AuthService } from 'src/app/feature/auth/service/auth.service';
 
 @Component({
   selector: 'app-login-page',
@@ -14,65 +9,80 @@ interface LoginResponse {
   styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPageComponent {
-  showLogin = true;
-  showEmailField = true;
-  showPasswordField = false;
+  step: number = 0;
+
   email = new FormControl('', [Validators.required, Validators.email]);
   password = new FormControl('', [Validators.required]);
 
-  private subscription: Subscription = new Subscription();
-
   constructor(
     private router: Router,
-    private loginService: LoginService,
+    private authService: AuthService,
   ) {}
 
-  onLoadSignin() {
-    this.showLogin = false;
-    this.showEmailField = true;
-  }
+  onClickContinue() {
+    switch (this.step) {
+      case 0:
+        this.step = 1;
+        break;
 
-  // Check the email before showing the password
-  onContinue() {
-    if (this.email.valid) {
-      this.showEmailField = false;
-      this.showPasswordField = true;
+      case 1:
+        // make an API call to check whether the email exists or not
+        this.checkEmail();
+        break;
+
+      case 2:
+        // make an API call to login the user
+        this.loginUser();
+        break;
+
+      default:
+        break;
     }
   }
 
-  onSubmit(form: NgForm) {
-    console.log('form');
+  onClickForgotPassword() {
+    //make forget password route
+    this.router.navigate(['/auth/forgot-password']);
   }
 
-  loginUser() {
+  onLoadSignin() {
+    this.router.navigate(['/auth/signup']);
+  }
+
+  private checkEmail() {
+    const email = this.email.value;
+
+    if (!email) {
+      return;
+    }
+
+    this.authService.checkEmail(email).subscribe({
+      next: () => {
+        this.step = 2;
+      },
+      error: (err) => {
+        alert('User does not exists');
+      },
+    });
+  }
+
+  private loginUser() {
     const email = this.email.value;
     const password = this.password.value;
 
     if (!email || !password) {
       return;
     }
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
 
-    this.subscription = this.loginService
-      .emailDetails(email, password)
-      .subscribe((res: LoginResponse) => {
-        console.log(res);
-
-        if (res.success) {
-          this.router.navigate(['/menu']);
-        } else {
-          alert('Invalid username or password');
-        }
-      });
-  }
-  loadSigninPage() {
-    this.router.navigate(['/signup']);
-  }
-  ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
+    this.authService.login(email, password).subscribe({
+      next: (res) => {
+        this.router.navigate(['/menu']);
+        console.log(res.data.token);
+        // TODO: save the token in local storage
+      },
+      error: (err) => {
+        alert('Invalid password');
+      },
+    });
   }
 }

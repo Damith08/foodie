@@ -1,4 +1,4 @@
-<div class="container p-5" *ngIf="showLogin">
+<div class="container p-5" *ngIf="step === 0">
   <div class="row d-flex justify-content-center">
     <div
       class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
@@ -21,7 +21,11 @@
         Continue with Apple
       </button>
       <p class="fw-login__line">or</p>
-      <button mat-button class="fw-login__button--red" (click)="onLoadSignin()">
+      <button
+        mat-button
+        class="fw-login__button--red"
+        (click)="onClickContinue()"
+      >
         <img src="assets\svg\email-icon.svg" alt="Email" height="24px" /><a
           href=""
         ></a>
@@ -36,14 +40,15 @@
     </div>
   </div>
 </div>
-<div class="container p-5" *ngIf="!showLogin">
+
+<div class="container p-5" *ngIf="step !== 0">
   <div class="row d-flex justify-content-center">
     <div
       class="col-12 col-md-5 justify-content-center flex-column align-item-center"
     >
-      <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+      <form #form="ngForm">
         <h1 class="row fw-login__h1">Sign up or log in</h1>
-        <div class="row fw-login__inputfield" *ngIf="showEmailField">
+        <div class="row fw-login__inputfield">
           <p class="row">Email address</p>
           <div class="row">
             <mat-form-field appearance="outline" class="fw-login__input-field">
@@ -54,6 +59,7 @@
                 name="email"
                 required
                 [formControl]="email"
+                [disabled]="step === 2"
               />
               <mat-error *ngIf="email.hasError('required')"
                 >Email field is required</mat-error
@@ -64,19 +70,23 @@
             </mat-form-field>
           </div>
 
-          <div class="row">
+          <div class="row" *ngIf="step === 1">
             <button
               mat-button
               type="submit"
               class="fw-login__continue"
               [disabled]="form.invalid"
-              (click)="onContinue()"
+              (click)="onClickContinue()"
             >
               Continue
             </button>
           </div>
           <div class="row">
-            <button mat-button class="fw-login fw-login__forgot">
+            <button
+              mat-button
+              class="fw-login fw-login__forgot"
+              (click)="onClickForgotPassword()"
+            >
               Forgot password
             </button>
           </div>
@@ -84,13 +94,13 @@
             <button
               mat-button
               class="fw-login__continue"
-              (click)="loadSigninPage()"
+              (click)="onLoadSignin()"
             >
               Signin
             </button>
           </div>
         </div>
-        <div class="row" *ngIf="!showEmailField">
+        <div class="row" *ngIf="step === 2">
           <p class="row">Password</p>
           <div class="row">
             <mat-form-field appearance="outline" class="fw-login__input-field">
@@ -114,7 +124,7 @@
               type="submit"
               class="fw-login__continue"
               [disabled]="form.invalid"
-              (click)="loginUser()"
+              (click)="onClickContinue()"
             >
               Login
             </button>
