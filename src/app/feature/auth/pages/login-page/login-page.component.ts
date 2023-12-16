@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from 'src/app/login.service';
+import { LoginService } from 'src/app/feature/auth/service/auth.service';
 import { Subscription } from 'rxjs';
 
 interface LoginResponse {
