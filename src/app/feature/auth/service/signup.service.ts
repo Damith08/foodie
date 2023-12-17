@@ -14,20 +14,21 @@ export class SignupService {
     firstName: string,
     lastName: string,
     username: string,
-    email: string,
-    password: string,
     address: string,
     contact: string,
+    email: string,
+    password: string,
   ): Observable<CommonResponse<ISignupResponse>> {
     const body: ISignupRequest = {
       firstName: firstName,
       lastName: lastName,
       username: username,
-      email: email,
-      password: password,
       address: address,
       contact: contact,
+      email: email,
+      password: password,
     };
+    console.log(body);
     return this.http.post<CommonResponse<ISignupResponse>>(
       'http://localhost:3000/auth/signup',
       body,

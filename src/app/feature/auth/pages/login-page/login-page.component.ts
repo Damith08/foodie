@@ -58,9 +58,11 @@ export class LoginPageComponent {
 
     this.authService.checkEmail(email).subscribe({
       next: () => {
+        console.log(email);
         this.step = 2;
       },
       error: (err) => {
+        console.log(err);
         alert('User does not exists');
       },
     });
@@ -77,8 +79,10 @@ export class LoginPageComponent {
     this.authService.login(email, password).subscribe({
       next: (res) => {
         this.router.navigate(['/menu']);
+        const token = res.data.token;
         console.log(res.data.token);
         // TODO: save the token in local storage
+        localStorage.setItem('token', token);
       },
       error: (err) => {
         alert('Invalid password');
