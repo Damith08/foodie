@@ -1,4 +1,4 @@
-export interface Register {
+export interface ISignupRequest {
   firstName: string;
   lastName: string;
   username: string;
@@ -6,4 +6,8 @@ export interface Register {
   password: string;
   address: string;
   contact: string;
+}
+
+export interface ISignupResponse {
+  token: string;
 }

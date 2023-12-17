@@ -3,7 +3,7 @@
     <div
       class="col-12 col-md-5 d-flex justify-content-center flex-column align-item-center"
     >
-      <form [formGroup]="userRegisterForm" (ngSubmit)="onSubmit()">
+      <form #form="ngForm">
         <h1 class="row fw-signup__h1">User Registration</h1>
         <div class="fw-signup__inputfield">
           <p class="row">First Name</p>
@@ -17,8 +17,7 @@
                 required
                 formControlName="firstName"
               />
-              <mat-error
-                *ngIf="userRegisterForm.controls.firstName.hasError('required')"
+              <mat-error *ngIf="firstName.hasError('required')"
                 >First Name field is required</mat-error
               >
             </mat-form-field>
@@ -38,10 +37,7 @@
                   required
                   formControlName="lastName"
                 />
-                <mat-error
-                  *ngIf="
-                    userRegisterForm.controls.lastName.hasError('required')
-                  "
+                <mat-error *ngIf="lastName.hasError('required')"
                   >Last Name field is required</mat-error
                 >
               </mat-form-field>
@@ -62,10 +58,7 @@
                   required
                   formControlName="username"
                 />
-                <mat-error
-                  *ngIf="
-                    userRegisterForm.controls.username.hasError('required')
-                  "
+                <mat-error *ngIf="username.hasError('required')"
                   >Username field is required</mat-error
                 >
               </mat-form-field>
@@ -86,8 +79,7 @@
                   required
                   formControlName="address"
                 />
-                <mat-error
-                  *ngIf="userRegisterForm.controls.address.hasError('required')"
+                <mat-error *ngIf="address.hasError('required')"
                   >Address field is required</mat-error
                 >
               </mat-form-field>
@@ -108,8 +100,7 @@
                   required
                   formControlName="contact"
                 />
-                <mat-error
-                  *ngIf="userRegisterForm.controls.contact.hasError('required')"
+                <mat-error *ngIf="contact.hasError('required')"
                   >Contact number field is required</mat-error
                 >
               </mat-form-field>
@@ -130,12 +121,10 @@
                   required
                   formControlName="email"
                 />
-                <mat-error
-                  *ngIf="userRegisterForm.controls.email.hasError('required')"
+                <mat-error *ngIf="email.hasError('required')"
                   >Email field is required</mat-error
                 >
-                <mat-error
-                  *ngIf="userRegisterForm.controls.email.hasError('email')"
+                <mat-error *ngIf="email.hasError('email')"
                   >Enter a valid email</mat-error
                 >
               </mat-form-field>
@@ -156,10 +145,7 @@
                   required
                   formControlName="password"
                 />
-                <mat-error
-                  *ngIf="
-                    userRegisterForm.controls.password.hasError('required')
-                  "
+                <mat-error *ngIf="password.hasError('required')"
                   >Password field is required</mat-error
                 >
               </mat-form-field>
@@ -171,6 +157,7 @@
             mat-button
             type="submit"
             class="fw-signup fw-signup__continue"
+            (click)="signupUser()"
           >
             Signin
           </button>
