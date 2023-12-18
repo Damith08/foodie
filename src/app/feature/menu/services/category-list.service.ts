@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { IDishCategory } from '../types/category';
 import { CommonResponse } from 'src/app/types/common.types';
-import { Restaurant } from './restaurant';
 
 @Injectable({
   providedIn: 'root',
 })
-export class RestaurantService {
+export class CategoryListService {
   constructor(private http: HttpClient) {}
 
-  getSingleRestaurant(): Observable<CommonResponse<Restaurant>> {
-    const url = 'http://127.0.0.1:3000/restaurants/657951124dd52263fd878db6';
-    return this.http.get<CommonResponse<Restaurant>>(url);
+  getAllCategories(): Observable<CommonResponse<IDishCategory[]>> {
+    const url = 'http://127.0.0.1:3000/dish-categories';
+    return this.http.get<CommonResponse<IDishCategory[]>>(url);
   }
 }

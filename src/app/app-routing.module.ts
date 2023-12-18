@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
-import { SignupPageComponent } from './feature/auth/pages/signup-page/signup-page.component';
-import { MenuPageComponent } from './pages/menu-page/menu-page.component';
-
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   {
@@ -18,7 +15,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('../app/feature/auth/auth.module').then((m) => m.AuthModule),
   },
-  { path: 'menu', component: MenuPageComponent },
+  {
+    path: 'menu',
+    loadChildren: () =>
+      import('../app/feature/menu/menu.module').then((m) => m.MenuModule),
+  },
 ];
 
 @NgModule({

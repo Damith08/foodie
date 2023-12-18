@@ -1,104 +1,13 @@
 <div class="row">
-  <h1 class="fw-menu-card-list__heading" *ngFor="let dish of dishes">
-    {{ dish.dishCategory.name }}
+  <h1 class="fw-menu-card-list__heading" *ngFor="let group of groupedDishes">
+    <app-dish-category-section
+      [category]="group.category"
+      [dishes]="group.dishes"
+    ></app-dish-category-section>
   </h1>
 </div>
-<div class="row">
-  <p class="fw-menu-card-list__text" *ngFor="let dish of dishes">
-    {{ dish.dishCategory.name }}
-  </p>
-</div>
-<div class="row">
-  <div class="col-xl">
-    <div class="fw-menu-card-list__mat-card">
-      <mat-card style="z-index: -1">
-        <mat-card-content>
-          <div class="row">
-            <div class="col-8">
-              <span
-                class="fw-menu-card-list__card-heading"
-                *ngFor="let dish of dishes"
-              >
-                {{ dish.name }}
-              </span>
-              <br />
-              <span
-                class="fw-menu-card-list__card-description"
-                *ngFor="let dish of dishes"
-              >
-                {{ dish.description }}
-              </span>
-              <div class="row">
-                <div class="fw-menu-card-list__price-details">
-                  <span class="fw-menu-card-list__black-text"> $12.90</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <img
-                src="https://rs-menus-api.roocdn.com/images/3d78a5f6-9d7a-4825-af5c-06e04226fe34/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop"
-                alt="dish"
-                class="fw-menu-card-list__img"
-              />
-            </div>
-            <div class="col-2">
-              <button mat-stroked-button class="fw-menu-card-list__add-button">
-                <img
-                  src="assets/images/menu-page/plus-symbol.svg"
-                  alt="add-icon"
-                  class="fw-menu-card-list__button-img"
-                />
-              </button>
-            </div>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div>
-  <div class="col-xl">
-    <div class="fw-menu-card-list__mat-card">
-      <mat-card style="z-index: -1">
-        <mat-card-content>
-          <div class="row">
-            <div class="col-8">
-              <span class="fw-menu-card-list__card-heading">
-                1002 Sesame Oil Chicken Set 麻油鸡套餐.
-              </span>
-              <br />
-              <span class="fw-menu-card-list__card-description">
-                Sesame oil chicken served with 2 different vegetables of the
-                day!
-              </span>
-              <div class="row">
-                <div class="fw-menu-card-list__price-details">
-                  <span class="fw-menu-card-list__black-text"> $12.90 </span>
-                  <span class="fw-menu-card-list__popular-text">Popular</span>
-                </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <img
-                src="https://rs-menus-api.roocdn.com/images/93e6afcd-7472-468b-a751-73311a298238/image.jpeg?width=98&height=98&auto=webp&format=jpg&fit=crop"
-                alt="dish"
-                class="fw-menu-card-list__img"
-              />
-            </div>
-            <div class="col-2">
-              <button mat-stroked-button class="fw-menu-card-list__add-button">
-                <img
-                  src="assets/images/menu-page/plus-symbol.svg"
-                  alt="add-icon"
-                  class="fw-menu-card-list__button-img"
-                />
-              </button>
-            </div>
-          </div>
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div>
-</div>
-<div class="row">
+
+<!-- <div class="row">
   <div class="col-xl">
     <div class="fw-menu-card-list__mat-card">
       <mat-card style="z-index: -1">
@@ -311,4 +220,4 @@
     </div>
   </div>
   <div class="col-xl"></div>
-</div>
+</div> -->

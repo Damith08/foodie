@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RestaurantService } from './restaurant.service';
-import { Restaurant } from './restaurant';
+import { RestaurantService } from '../../services/restaurant.service';
+import { IRestaurant } from '../../types/restaurant';
 
 @Component({
   selector: 'app-menu-page',
@@ -8,7 +8,7 @@ import { Restaurant } from './restaurant';
   styleUrls: ['./menu-page.component.scss'],
 })
 export class MenuPageComponent implements OnInit {
-  restaurants!: Restaurant;
+  restaurants!: IRestaurant;
   isLoading = false;
 
   constructor(private restaurantService: RestaurantService) {}

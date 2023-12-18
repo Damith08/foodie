@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xl">
+    <div class="fw-menu-card-list__mat-card">
+      <mat-card style="z-index: -1">
+        <mat-card-content>
+          <div class="row">
+            <div class="col-8">
+              <span class="fw-menu-card-list__card-heading">
+                {{ dish?.name }}
+              </span>
+              <br />
+              <span class="fw-menu-card-list__card-description">
+                {{ dish?.description }}
+              </span>
+              <div class="row">
+                <div class="fw-menu-card-list__price-details">
+                  <span class="fw-menu-card-list__black-text">
+                    ${{ dish?.price }}</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <img
+                src="{{ dish?.image }}"
+                alt="dish"
+                class="fw-menu-card-list__img"
+              />
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
