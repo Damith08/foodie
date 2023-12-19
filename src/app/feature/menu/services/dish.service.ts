@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CommonResponse } from 'src/app/types/common.types';
 import { Observable } from 'rxjs';
-import { IPopulatedDish } from '../types/dish';
+import { IPopulatedDish } from '../types/dishes.types';
 
 @Injectable({
   providedIn: 'root',

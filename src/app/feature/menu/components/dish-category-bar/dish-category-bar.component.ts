@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryListService } from '../../services/category-list.service';
-import { IDishCategory } from '../../types/category';
+import { IDishCategory } from '../../types/categories.types';
 
 @Component({
   selector: 'app-dish-category-bar',

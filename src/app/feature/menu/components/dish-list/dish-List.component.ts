@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DishService } from '../../services/dish.service';
-import { IPopulatedDish } from '../../types/dish';
-import { IDishCategory } from '../../types/category';
+import { IPopulatedDish } from '../../types/dishes.types';
+import { IDishCategory } from '../../types/categories.types';
 
 @Component({
   selector: 'app-dish-list',

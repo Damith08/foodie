@@ -1,4 +1,4 @@
-import { IDishCategory } from "./category";
+import { IDishCategory } from './categories.types';
 
 export interface IPopulatedDish {
   name: string;

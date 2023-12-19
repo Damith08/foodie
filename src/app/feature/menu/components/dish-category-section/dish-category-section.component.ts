@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { IDishCategory } from '../../types/category';
-import { IPopulatedDish } from '../../types/dish';
+import { IDishCategory } from '../../types/categories.types';
+import { IPopulatedDish } from '../../types/dishes.types';
 
 @Component({
   selector: 'app-dish-category-section',

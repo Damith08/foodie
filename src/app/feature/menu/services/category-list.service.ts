@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IDishCategory } from '../types/category';
+import { IDishCategory } from '../types/categories.types';
 import { CommonResponse } from 'src/app/types/common.types';
 
 @Injectable({

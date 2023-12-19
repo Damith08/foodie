@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IPopulatedDish } from '../../types/dish';
+import { IPopulatedDish } from '../../types/dishes.types';
 
 @Component({
   selector: 'app-dish-card',
