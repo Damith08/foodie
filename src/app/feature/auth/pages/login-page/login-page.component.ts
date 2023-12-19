@@ -80,8 +80,7 @@ export class LoginPageComponent {
       next: (res) => {
         this.router.navigate(['/menu']);
         const token = res.data.token;
-        console.log(res.data.token);
-        // TODO: save the token in local storage
+        // save the token in local storage
         localStorage.setItem('token', token);
       },
       error: (err) => {

@@ -14,7 +14,21 @@ export class DishListComponent implements OnInit {
   groupedDishes: {
     category: IDishCategory;
     dishes: IPopulatedDish[];
-  }[] = [];
+  }[] = [
+    {
+      category: { name: 'drinks' },
+      dishes: [
+        {
+          name: 'pizza',
+          description: 'fhhhlhaklfj',
+          price: 121,
+          image: 'sachjgsj',
+          dishCategory: { name: 'drinks' },
+          restaurant: 'klasdjfkl',
+        },
+      ],
+    },
+  ];
 
   constructor(private dishService: DishService) {}
 
@@ -28,7 +42,7 @@ export class DishListComponent implements OnInit {
       next: (res) => {
         this.isLoading = false;
         this.dishes = res.data;
-        console.log(this.dishes);
+        // TODO:group the dishes according to the category
       },
       error: (err) => {
         this.isLoading = false;

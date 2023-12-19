@@ -8,7 +8,7 @@ import { IRestaurant } from '../../types/restaurant';
   styleUrls: ['./restaurant-info.component.scss'],
 })
 export class RestaurantInfoComponent implements OnInit {
-  restaurants!: IRestaurant;
+  restaurant?: IRestaurant;
   isLoading = false;
 
   constructor(private restaurantService: RestaurantService) {}
@@ -21,10 +21,8 @@ export class RestaurantInfoComponent implements OnInit {
     this.isLoading = true;
     this.restaurantService.getSingleRestaurant().subscribe({
       next: (res) => {
-        this.restaurants = res.data;
+        this.restaurant = res.data;
         this.isLoading = false;
-        console.log(this.restaurants);
-        console.log(this.restaurants.tag);
       },
       error: (err) => {
         this.isLoading = false;

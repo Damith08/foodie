@@ -13,7 +13,7 @@
       <div class="d-flex col-xl-4 col-md-4">
         <mat-spinner mode="indeterminate" *ngIf="isLoading"></mat-spinner>
         <img
-          src="{{ restaurants.image }}"
+          src="{{ restaurant?.image }}"
           alt="menu"
           class="fw-menu__main-img"
         />
@@ -22,18 +22,18 @@
         <div class="row">
           <div class="col-xl-7">
             <h1 class="fw-menu__heading">
-              {{ restaurants.name }}
+              {{ restaurant?.name }}
             </h1>
             <div>
-              <span>{{ restaurants.tag[0] }} </span>
-              <span>.{{ restaurants.tag[1] }} </span>
-              <span>.{{ restaurants.tag[2] }}</span>
+              <span>{{ restaurant?.tag?.[0] }} </span>
+              <span>.{{ restaurant?.tag?.[1] }} </span>
+              <span>.{{ restaurant?.tag?.[2] }}</span>
             </div>
             <div>
-              <span class="col">Opens at {{ restaurants.closeAt }} </span>
-              <span class="col">·${{ restaurants.minimum }} minimum</span>
+              <span class="col">Opens at {{ restaurant?.closeAt }} </span>
+              <span class="col">·${{ restaurant?.minimum }} minimum</span>
               <span class="col">
-                ·${{ restaurants.deliveryCharge }} delivery</span
+                ·${{ restaurant?.deliveryCharge }} delivery</span
               >
             </div>
             <div>
