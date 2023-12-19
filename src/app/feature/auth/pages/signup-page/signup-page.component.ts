@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { SignupService } from '../../service/signup.service';
+import { AuthService } from '../../service/auth.service';
 
 @Component({
   selector: 'app-signup-page',
@@ -19,7 +19,7 @@ export class SignupPageComponent {
 
   constructor(
     private router: Router,
-    private signupService: SignupService,
+    private authService: AuthService,
   ) {}
 
   //
@@ -44,7 +44,7 @@ export class SignupPageComponent {
     ) {
       return;
     }
-    this.signupService
+    this.authService
       .signinDetails(
         firstName,
         lastName,
