@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryListService } from '../../services/category-list.service';
+
 import { IDishCategory } from '../../types/categories.types';
+import { CategoriesService } from '../../services/categories.service';
 
 @Component({
   selector: 'app-dish-category-bar',
@@ -11,7 +12,7 @@ export class DishCategoryBarComponent implements OnInit {
   categories: IDishCategory[] = [];
   isLoading = false;
 
-  constructor(private categoryService: CategoryListService) {}
+  constructor(private categoriesService: CategoriesService) {}
 
   ngOnInit() {
     this.getAllCategories();
@@ -19,7 +20,7 @@ export class DishCategoryBarComponent implements OnInit {
 
   getAllCategories() {
     this.isLoading = true;
-    this.categoryService.getAllCategories().subscribe({
+    this.categoriesService.getAllCategories().subscribe({
       next: (res) => {
         this.categories = res.data;
         this.isLoading = false;

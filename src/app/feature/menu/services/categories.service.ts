@@ -7,7 +7,7 @@ import { CommonResponse } from 'src/app/types/common.types';
 @Injectable({
   providedIn: 'root',
 })
-export class CategoryListService {
+export class CategoriesService {
   constructor(private http: HttpClient) {}
 
   getAllCategories(): Observable<CommonResponse<IDishCategory[]>> {
