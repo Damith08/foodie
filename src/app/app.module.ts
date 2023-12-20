@@ -19,7 +19,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgFor, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { SideNavBarComponent } from './components/side-nav-bar/side-nav-bar.component';
 
@@ -35,6 +35,7 @@ import { SideNavBarComponent } from './components/side-nav-bar/side-nav-bar.comp
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    CommonModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
@@ -46,10 +47,8 @@ import { SideNavBarComponent } from './components/side-nav-bar/side-nav-bar.comp
     MatProgressSpinnerModule,
     FormsModule,
     MatSelectModule,
-    NgFor,
     MatCardModule,
     ReactiveFormsModule,
-    NgIf,
   ],
   providers: [MatIconRegistry],
   bootstrap: [AppComponent],
