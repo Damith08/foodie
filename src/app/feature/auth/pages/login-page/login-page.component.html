@@ -86,6 +86,7 @@
               mat-button
               class="fw-login fw-login__forgot"
               (click)="onClickForgotPassword()"
+              [hidden]="step === 2"
             >
               Forgot password
             </button>
@@ -95,6 +96,7 @@
               mat-button
               class="fw-login__continue"
               (click)="onLoadSignin()"
+              [hidden]="step === 2"
             >
               Signin
             </button>
