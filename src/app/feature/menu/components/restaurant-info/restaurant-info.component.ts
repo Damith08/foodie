@@ -14,10 +14,10 @@ export class RestaurantInfoComponent implements OnInit {
   constructor(private restaurantService: RestaurantService) {}
 
   ngOnInit() {
-    this.reloadData();
+    this.getRestaurant();
   }
 
-  reloadData() {
+  getRestaurant() {
     this.isLoading = true;
     this.restaurantService.getSingleRestaurant().subscribe({
       next: (res) => {
