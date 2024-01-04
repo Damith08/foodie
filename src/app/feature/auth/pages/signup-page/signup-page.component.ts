@@ -45,15 +45,7 @@ export class SignupPageComponent {
       return;
     }
     this.authService
-      .signinDetails(
-        firstName,
-        lastName,
-        username,
-        address,
-        contact,
-        email,
-        password,
-      )
+      .signup(firstName, lastName, username, address, contact, email, password)
       .subscribe({
         next: (res) => {
           this.router.navigate(['/menu']);
