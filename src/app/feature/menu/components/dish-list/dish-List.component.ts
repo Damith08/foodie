@@ -28,7 +28,7 @@ export class DishListComponent implements OnInit {
       next: (res) => {
         this.isLoading = false;
         this.dishes = res.data;
-        // TODO:group the dishes according to the category
+        // group the dishes according to the category
         const categorizedDishes: ICategory[] = [];
         this.dishes.forEach((dish) => {
           const foundIndex = categorizedDishes.findIndex(
