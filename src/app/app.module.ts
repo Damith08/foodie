@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -22,6 +22,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
+import { HeadersInterceptor } from './feature/menu/headers.interceptor';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,10 @@ import { MatCardModule } from '@angular/material/card';
     MatSelectModule,
     MatCardModule,
   ],
-  providers: [MatIconRegistry],
+  providers: [
+    MatIconRegistry,
+    { provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {

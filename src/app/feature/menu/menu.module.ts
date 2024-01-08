@@ -16,6 +16,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { DishCardComponent } from './components/dish-card/dish-card.component';
 import { DishListComponent } from './components/dish-list/dish-List.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HeadersInterceptor } from './headers.interceptor';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,9 @@ import { DishListComponent } from './components/dish-list/dish-List.component';
     NgFor,
     MatCardModule,
     NgIf,
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true },
   ],
 })
 export class MenuModule {}
