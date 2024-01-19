@@ -1,0 +1,14 @@
+<div class="container">
+  <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+
+  <ul class="fw-menu-horizontal-bar">
+    <li
+      *ngFor="let category of categories"
+      class="fw-menu--horizontal-bar__list"
+    >
+      <button class="fw-menu-horizontal-bar__button">
+        {{ category.name }}
+      </button>
+    </li>
+  </ul>
+</div>

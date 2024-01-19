@@ -1,0 +1,28 @@
+.fw-menu-card {
+  &__heading1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #393e46;
+  }
+
+  &__card-margin {
+    margin-bottom: 20px;
+    z-index: -1;
+  }
+
+  &__card-heading {
+    color: #393e46;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__card-description {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__card-price {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
